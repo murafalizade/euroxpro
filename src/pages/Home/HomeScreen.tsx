@@ -6,6 +6,8 @@ import Feedback from "./Feedback.tsx";
 import DelegateScreen from "./DelegateScreen.tsx";
 import ResourceScreen from "./ResourcesScreen.tsx";
 import Footer from "../../components/Footer.tsx";
+import {Simulate} from "react-dom/test-utils";
+import pause = Simulate.pause;
 
 const HomeScreen = () => {
     return (
@@ -25,12 +27,16 @@ const HomeScreen = () => {
                     >
                         <h1 className="title">
                             <Typewriter
+                                options={{
+                                    loop:true
+                                }}
                                 onInit={(typewriter) => {
                                     typewriter.typeString("EuroXPro 2025")
                                         .pauseFor(500)
                                         .deleteAll()
-                                        .typeString("EuroXPro 2025")
-                                        .start();
+                                        .typeString("United for Exchange")
+                                        .start()
+                                        .pauseFor(500);
                                 }}
                             />
                         </h1>
