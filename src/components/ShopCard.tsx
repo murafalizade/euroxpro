@@ -6,10 +6,9 @@ interface ShopCardProps {
     price: string;
     imgSrc: string;
     altText: string;
-    link: string;
 }
 
-const ShopCard: FC<ShopCardProps> = ({ name, price, imgSrc, altText, link }) => {
+const ShopCard: FC<ShopCardProps> = ({ name, price, imgSrc, altText }) => {
     return (
         <div className="shop-card">
             <img src={imgSrc} alt={altText} className="shop-card-image" />

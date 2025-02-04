@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import ShopCard from "./ShopCard";
 import "slick-carousel/slick/slick.css";
@@ -83,7 +82,6 @@ const ShopCarousel = () => {
                             price={item.price}
                             imgSrc={item.img}
                             altText={item.name}
-                            link={"#"}
                         />
                     ))}
                 </Slider>

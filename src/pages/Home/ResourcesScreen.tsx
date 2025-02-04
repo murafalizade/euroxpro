@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
 
 const resources = [
@@ -14,7 +14,6 @@ const resources = [
 ];
 
 const ResourceScreen: FC = () => {
-    const [isRow, setIsRow] = useState(false);
 
     return (
         <motion.section
@@ -47,9 +46,9 @@ const ResourceScreen: FC = () => {
 
             <motion.div
                 style={{
-                    display: isRow ? "flex" : "grid",
-                    gridTemplateColumns: isRow ? "none" : "repeat(3, 1fr)",
-                    flexDirection: isRow ? "column" : "unset",
+                    display: "grid",
+                    gridTemplateColumns: "repeat(3, 1fr)",
+                    flexDirection:  "unset",
                     gap: "20px",
                     width: "80%",
                     maxWidth: "900px",
@@ -75,7 +74,7 @@ const ResourceScreen: FC = () => {
                             textDecoration: "none",
                             background: "white",
                             transition: "background 0.3s ease, color 0.3s ease",
-                            width: isRow ? "100%" : "auto",
+                            width: "auto",
                         }}
                         onMouseOver={(e) => {
                             e.currentTarget.style.background = "#000";

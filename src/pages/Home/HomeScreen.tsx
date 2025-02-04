@@ -6,8 +6,6 @@ import Feedback from "./Feedback.tsx";
 import DelegateScreen from "./DelegateScreen.tsx";
 import ResourceScreen from "./ResourcesScreen.tsx";
 import Footer from "../../components/Footer.tsx";
-import {Simulate} from "react-dom/test-utils";
-import pause = Simulate.pause;
 
 const HomeScreen = () => {
     return (

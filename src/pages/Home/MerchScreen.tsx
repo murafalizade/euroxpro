@@ -1,4 +1,3 @@
-import React from "react";
 import ShopCarousel from "../../components/ShopCarousel.tsx"; // Import your carousel component
 
 const MerchSection = () => {

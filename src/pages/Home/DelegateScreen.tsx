@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import DelegateCarousel from "../../components/DelegateCarousel.tsx"; // Import your carousel component
 
