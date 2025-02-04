@@ -14,6 +14,7 @@ const DelegateScreen = () => {
                 alignItems: "center",
                 padding: "20px",
             }}
+            id={'delegate'}
             initial={{ opacity: 0, y: 50 }}  // Start hidden & move up
             whileInView={{ opacity: 1, y: 0 }} // Animate when in view
             viewport={{ once: true, amount: 0.2 }} // Trigger when 20% is visible

@@ -2,21 +2,22 @@ import { FC } from "react";
 import { motion } from "framer-motion";
 
 const resources = [
-    { name: "Agenda", link: "#" },
-    { name: "Workshops", link: "#" },
-    { name: "Delegate Guide", link: "#" },
-    { name: "Partners", link: "#" },
+    { name: "Delegates support form", link: "#" },
     { name: "FAQ", link: "#" },
-    { name: "Speakers", link: "#" },
-    { name: "Accommodation", link: "#" },
-    { name: "Transportation", link: "#" },
-    { name: "Contact Us", link: "#" },
+    { name: "BOOKLET", link: "#" },
+    { name: "Shop form", link: "#" },
+    { name: "REGISTER NOW!", link: "#" },
+    { name: "AGENDA", link: "#" },
+    { name: "INVITATION LETTER FORM", link: "#" },
+    { name: "BOOKLET", link: "#" },
+    { name: "PICTURES", link: "#" },
 ];
 
 const ResourceScreen: FC = () => {
 
     return (
         <motion.section
+            id={'resources'}
             style={{
                 display: "flex",
                 flexDirection: "column",

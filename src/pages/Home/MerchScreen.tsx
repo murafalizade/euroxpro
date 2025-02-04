@@ -3,6 +3,7 @@ import ShopCarousel from "../../components/ShopCarousel.tsx"; // Import your car
 const MerchSection = () => {
     return (
         <section
+            id={'merch'}
             style={{
                 width: "100vw",
                 minHeight: "100vh",

@@ -22,6 +22,7 @@
 
 /* Image styling */
 .shop-card-image {
+    padding: 6px;
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -30,7 +31,7 @@
 
 /* Card Info section */
 .shop-card-info {
-    padding: 15px;
+    padding: 0 15px;
     width: 100%;
 }
 
@@ -40,12 +41,14 @@
     font-weight: 600;
     color: #333;
     margin: 10px 0;
+    text-align: left;
 }
 
 .shop-card-price {
     font-size: 16px;
     font-weight: 400;
     color: #888;
+    text-align: left;
 }
 
 /* Button/link styling */

@@ -72,7 +72,7 @@ const HomeScreen = () => {
                         width: '100%',
                     }}
                 >
-                    <a href="#about">
+                    <a href="#merch">
                         <div
                             style={{
                                 display: 'flex',
