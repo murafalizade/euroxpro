@@ -1,0 +1,8 @@
+body{
+    background: radial-gradient(circle at 0% 0%, #005402, #003801, #000000, #510000, #720000);
+    overflow-x: hidden;
+}
+
+*{
+    color: white;
+}

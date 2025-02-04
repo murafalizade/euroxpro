@@ -1,0 +1,66 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* This allows positioning of the overlay */
+    background-image: url('/public/italy.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.home-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: relative; /* Make sure content is above the overlay */
+    z-index: 1; /* Ensure content is on top of the overlay */
+}
+
+/* Create the overlay effect */
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 0% 0%, #005402, #003801, #000000, #510000, #720000);
+    opacity: 0.8; /* Adjust the opacity here */
+    z-index: 0; /* Ensure the overlay is behind the content */
+}
+
+.title {
+    font-size: 62px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 14px;
+    font-size: 16px;
+    width: 200px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
