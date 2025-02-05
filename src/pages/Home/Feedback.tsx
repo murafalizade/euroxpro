@@ -71,7 +71,7 @@ const Feedback: FC = () => {
 
                 {/* Right Section - Image */}
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
-                    <img src="europe.png" alt="Europe" className="img-fluid" style={{ maxWidth: "80%", width: '450px'}} />
+                    <img src="./europe.png" alt="Europe" className="img-fluid" style={{ maxWidth: "80%", width: '450px'}} />
                 </Col>
             </Row>
         </Container>
