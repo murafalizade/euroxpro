@@ -9,4 +9,14 @@ export async function fetchSheetData() {
     console.log(data);
 }
 
-// https://sheets.googleapis.com/v4/spreadsheets/1yJX8uCpfAYj27nyTKQdNtE9n-le2DHLgzL8whT2sN0Gg/values/Cover!A1:C10?key=
+// https://sheets.googleapis.com/v4/spreadsheets/11XbmhooLKQcETblBhGGhLlf-NJPaCiYyNOV-zY6oI6k/values/Sheet1!A1:C10?key=993287adbe699145551ca05b80739c5eab9dfff9
+// https://sheets.googleapis.com/v4/spreadsheets/11XbmhooLKQcETblBhGGhLlf-NJPaCiYyNOV-zY6oI6k/values/Sheet1!A1:C10?key=AIzaSyA_l7WTCB04HR7s208I7dNOCzQ8LoP6jXk
+const columns = [
+    'Please upload your best picture😊',
+    'What is your Name & Surname?',
+    'What is your e-mail address?',
+    'What is your phone number?',
+    'What is your Telegram username?',
+    'What is you position?',
+    'What is your MC/LC?'
+]
