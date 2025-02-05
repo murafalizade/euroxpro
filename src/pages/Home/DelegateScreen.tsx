@@ -1,7 +1,20 @@
+import { FC } from "react";
 import { motion } from "framer-motion";
-import DelegateCarousel from "../../components/DelegateCarousel.tsx"; // Import your carousel component
+import { Row, Col, Button } from "react-bootstrap";
+import DelegateCard from "../../components/DelegateCard";
 
-const DelegateScreen = () => {
+const delegates = [
+    { name: "Marco", surname: "Rossi", position: "President", img: "https://via.placeholder.com/150" },
+    { name: "Elena", surname: "Bianchi", position: "Vice President", img: "https://via.placeholder.com/150" },
+    { name: "Luca", surname: "Verdi", position: "Marketing Director", img: "https://via.placeholder.com/150" },
+    { name: "Giulia", surname: "Ferrari", position: "Finance Manager", img: "https://via.placeholder.com/150" },
+    { name: "Andrea", surname: "Conti", position: "Operations Manager", img: "https://via.placeholder.com/150" },
+    { name: "Sofia", surname: "Romano", position: "HR Director", img: "https://via.placeholder.com/150" },
+    { name: "Riccardo", surname: "Moretti", position: "IT Manager", img: "https://via.placeholder.com/150" },
+    { name: "Valentina", surname: "Gallo", position: "Partnership Manager", img: "https://via.placeholder.com/150" },
+];
+
+const DelegateScreen: FC = () => {
     return (
         <motion.section
             style={{
@@ -15,37 +28,40 @@ const DelegateScreen = () => {
                 padding: "20px",
             }}
             id={'delegate'}
-            initial={{ opacity: 0, y: 50 }}  // Start hidden & move up
-            whileInView={{ opacity: 1, y: 0 }} // Animate when in view
-            viewport={{ once: true, amount: 0.2 }} // Trigger when 20% is visible
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
         >
-            {/* Title Section */}
             <motion.h1
-                style={{
-                    fontSize: "36px",
-                    marginBottom: "20px",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                }}
-                initial={{ opacity: 0, y: -20 }} // Slight fade-in effect
+                style={{ fontSize: "36px", marginBottom: "20px", fontWeight: "bold", textAlign: "center" }}
+                initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
                 Delegates
             </motion.h1>
 
-            {/* Delegate Carousels with staggered animation */}
-            {[...Array(4)].map((_, index) => (
-                <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.9 }} // Start smaller
-                    whileInView={{ opacity: 1, scale: 1 }} // Pop in effect
-                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                >
-                    <DelegateCarousel />
-                </motion.div>
-            ))}
+            <Row className="justify-content-center" style={{ width: "80%", maxWidth: "1200px" }}>
+                {delegates.map((delegate, index) => (
+                    <Col key={index} md={3} sm={6} className="d-flex justify-content-center mb-4">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
+                            <DelegateCard {...delegate} />
+                        </motion.div>
+                    </Col>
+                ))}
+            </Row>
+
+            <Button
+                variant="danger"
+                style={{ marginTop: "20px" }}
+            >
+              Show More
+            </Button>
         </motion.section>
     );
 };

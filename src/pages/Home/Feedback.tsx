@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import {ChangeEvent, FC, FormEvent, useState} from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
-const Feedback: React.FC = () => {
+const Feedback: FC = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         description: "",
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({
             ...prevState,
@@ -15,171 +16,65 @@ const Feedback: React.FC = () => {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        // Handle form submission here
         console.log(formData);
     };
 
     return (
-        <div
-            style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: "40px",
-                width: "100vw",
-                height: "100vh",
-                boxSizing: "border-box",
-            }}
-        >
-            {/* Left Section - Form */}
-            <div
-                style={{
-                    width: "45%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    padding: "20px",
-                    borderRadius: "8px",
-                }}
-            >
-                <h2
-                    style={{
-                        fontSize: "24px",
-                        fontWeight: "600",
-                        marginBottom: "20px",
-                    }}
-                >
-                    Feedback Form
-                </h2>
+        <Container fluid className="p-5">
+            <Row className="align-items-center">
+                {/* Left Section - Form */}
+                <Col xs={12} md={6} className="p-4">
+                    <h2 className="mb-4">Feedback Form</h2>
 
-                <form onSubmit={handleSubmit} style={{ width: "100%" }}>
-                    <label
-                        htmlFor="name"
-                        style={{
-                            fontSize: "16px",
-                            fontWeight: "500",
-                            marginBottom: "8px",
-                        }}
-                    >
-                        Name:
-                    </label>
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        style={{
-                            width: "100%",
-                            padding: "10px",
-                            fontSize: "16px",
-                            marginBottom: "15px",
-                            borderRadius: "4px",
-                            border: "1px solid #ccc",
-                        }}
-                    />
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                placeholder="Enter your name"
+                            />
+                        </Form.Group>
 
-                    <label
-                        htmlFor="email"
-                        style={{
-                            fontSize: "16px",
-                            fontWeight: "500",
-                            marginBottom: "8px",
-                        }}
-                    >
-                        Email:
-                    </label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        style={{
-                            width: "100%",
-                            padding: "10px",
-                            fontSize: "16px",
-                            marginBottom: "15px",
-                            borderRadius: "4px",
-                            border: "1px solid #ccc",
-                        }}
-                    />
+                        <Form.Group className="mb-3">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="Enter your email"
+                            />
+                        </Form.Group>
 
-                    <label
-                        htmlFor="description"
-                        style={{
-                            fontSize: "16px",
-                            fontWeight: "500",
-                            marginBottom: "8px",
-                        }}
-                    >
-                        Description:
-                    </label>
-                    <textarea
-                        name="description"
-                        id="description"
-                        value={formData.description}
-                        onChange={handleChange}
-                        style={{
-                            width: "100%",
-                            padding: "10px",
-                            fontSize: "16px",
-                            marginBottom: "20px",
-                            borderRadius: "4px",
-                            border: "1px solid #ccc",
-                            resize: "vertical",
-                            minHeight: "100px",
-                        }}
-                    ></textarea>
+                        <Form.Group className="mb-4">
+                            <Form.Label>Description</Form.Label>
+                            <Form.Control
+                                as="textarea"
+                                name="description"
+                                value={formData.description}
+                                onChange={handleChange}
+                                placeholder="Enter your feedback"
+                                rows={4}
+                            />
+                        </Form.Group>
 
-                    <button
-                        type="submit"
-                        style={{
-                            padding: "12px 20px",
-                            fontSize: "16px",
-                            backgroundColor: "#005402",
-                            color: "white",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            border: "none",
-                            transition: "background-color 0.3s ease",
-                        }}
-                    >
-                        Send Feedback
-                    </button>
-                </form>
-            </div>
+                        <Button type="submit" variant="danger">
+                            Send Feedback
+                        </Button>
+                    </Form>
+                </Col>
 
-            {/* Right Section - Globe Icon */}
-            <div
-                style={{
-                    width: "45%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                }}
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="120"
-                    height="120"
-                    viewBox="0 0 24 24"
-                    style={{
-                        fill: "none",
-                        stroke: "#005402",
-                        strokeWidth: "2",
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                    }}
-                >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 2v20" />
-                    <path d="M2 12h20" />
-                </svg>
-            </div>
-        </div>
+                {/* Right Section - Image */}
+                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
+                    <img src="europe.png" alt="Europe" className="img-fluid" style={{ maxWidth: "80%", width: '450px'}} />
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
