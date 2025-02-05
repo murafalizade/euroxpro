@@ -2,7 +2,7 @@ const API_KEY = "AIzaSyA_l7WTCB04HR7s208I7dNOCzQ8LoP6jXk";
 const SHEET_ID = "11XbmhooLKQcETblBhGGhLlf-NJPaCiYyNOV-zY6oI6k";
 const RANGE = "Sheet1!A2:AC20";
 
-const columns = {
+const columns: {[key:string]: number} = {
     'name': 2,
     'phoneNumber': 5,
     'position': 11,

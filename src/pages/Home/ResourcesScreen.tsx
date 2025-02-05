@@ -4,9 +4,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import './Resources.css'
 
 const resources = [
-    { name: "Delegates support form", link: "#" },
+    { name: "DELEGATE SUPPORT FORM", link: "#" },
     { name: "FAQ", link: "#" },
-    { name: "BOOKLET", link: "#" },
+    { name: "TRANSPORTATION FORM", link: "#" },
     { name: "Shop form", link: "#" },
     { name: "REGISTER NOW!", link: "#" },
     { name: "AGENDA", link: "#" },

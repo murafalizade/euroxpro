@@ -1,6 +1,6 @@
 import  {FC} from "react";
 
-interface DelegateCardProps {
+export interface DelegateCardProps {
     name: string;
     position: string;
     lc:string;

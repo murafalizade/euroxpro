@@ -1,13 +1,11 @@
-import {FC, useEffect, useState} from "react";
+import {FC} from "react";
 import { motion } from "framer-motion";
 import { Row, Col, Button } from "react-bootstrap";
-import DelegateCard from "../../components/DelegateCard";
+import DelegateCard, {DelegateCardProps} from "../../components/DelegateCard";
 import {fetchSheetData} from "../../service/sheetService.ts";
 import {useQuery} from "react-query";
 
 const DelegateScreen: FC = () => {
-    const [delegate, setDelegates] = useState([]);
-
     const {data = []} = useQuery('DELEGATE_DATA', fetchSheetData)
 
     return (
@@ -38,14 +36,14 @@ const DelegateScreen: FC = () => {
             </motion.h1>
 
             <Row className="justify-content-center" style={{ width: "80%", maxWidth: "1200px" }}>
-                {data.map((delegate, index) => (
+                {data.map((delegate:DelegateCardProps, index:number) => (
                     <Col key={index} md={3} sm={6} className="d-flex justify-content-center mb-4">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <DelegateCard {...delegate} />
+                            <DelegateCard img={delegate.img} name={delegate.name} lc={delegate.lc} position={delegate.position} />
                         </motion.div>
                     </Col>
                 ))}
