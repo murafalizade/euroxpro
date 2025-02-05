@@ -2,12 +2,12 @@ import  {FC} from "react";
 
 interface DelegateCardProps {
     name: string;
-    surname: string;
     position: string;
+    lc:string;
     img: string;
 }
 
-const DelegateCard: FC<DelegateCardProps> = ({name, surname, position, img}) => {
+const DelegateCard: FC<DelegateCardProps> = ({name, lc, position, img = ''}) => {
     return (
         <div
             style={{
@@ -27,12 +27,11 @@ const DelegateCard: FC<DelegateCardProps> = ({name, surname, position, img}) => 
         >
             <img
                 src={img}
-                alt={`${name} ${surname}`}
+                alt={name}
                 style={{
-                    width: "100px",
-                    height: "100px",
+                    width: "220px",
+                    height: "180px",
                     objectFit: "cover",
-                    borderRadius: "50%",
                 }}
             />
             <div>
@@ -44,7 +43,7 @@ const DelegateCard: FC<DelegateCardProps> = ({name, surname, position, img}) => 
                         margin: "5px 0",
                     }}
                 >
-                    {name} {surname}
+                    {name}
                 </h3>
                 <p
                     style={{
@@ -54,7 +53,7 @@ const DelegateCard: FC<DelegateCardProps> = ({name, surname, position, img}) => 
                         margin: "5px 0",
                     }}
                 >
-                    {position} - AIESEC in Italia
+                    {position} - AIESEC in {lc}
                 </p>
             </div>
         </div>

@@ -1,20 +1,22 @@
-import { FC } from "react";
+import {FC, useEffect, useState} from "react";
 import { motion } from "framer-motion";
 import { Row, Col, Button } from "react-bootstrap";
 import DelegateCard from "../../components/DelegateCard";
-
-const delegates = [
-    { name: "Marco", surname: "Rossi", position: "President", img: "https://via.placeholder.com/150" },
-    { name: "Elena", surname: "Bianchi", position: "Vice President", img: "https://via.placeholder.com/150" },
-    { name: "Luca", surname: "Verdi", position: "Marketing Director", img: "https://via.placeholder.com/150" },
-    { name: "Giulia", surname: "Ferrari", position: "Finance Manager", img: "https://via.placeholder.com/150" },
-    { name: "Andrea", surname: "Conti", position: "Operations Manager", img: "https://via.placeholder.com/150" },
-    { name: "Sofia", surname: "Romano", position: "HR Director", img: "https://via.placeholder.com/150" },
-    { name: "Riccardo", surname: "Moretti", position: "IT Manager", img: "https://via.placeholder.com/150" },
-    { name: "Valentina", surname: "Gallo", position: "Partnership Manager", img: "https://via.placeholder.com/150" },
-];
+import {fetchSheetData} from "../../service/sheetService.ts";
 
 const DelegateScreen: FC = () => {
+    const [delegate, setDelegates] = useState([]);
+
+    const loadDelegates = async () => {
+        const res = await fetchSheetData();
+        setDelegates(res);
+    }
+
+
+    useEffect(() => {
+        loadDelegates()
+    }, []);
+
     return (
         <motion.section
             style={{
@@ -43,7 +45,7 @@ const DelegateScreen: FC = () => {
             </motion.h1>
 
             <Row className="justify-content-center" style={{ width: "80%", maxWidth: "1200px" }}>
-                {delegates.map((delegate, index) => (
+                {delegate.map((delegate, index) => (
                     <Col key={index} md={3} sm={6} className="d-flex justify-content-center mb-4">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
