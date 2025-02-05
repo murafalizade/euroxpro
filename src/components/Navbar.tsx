@@ -35,7 +35,7 @@ const CustomNavbar = () => {
                         <Nav.Link href="#merch" className="mx-3">Agenda</Nav.Link>
                         <NavDropdown title="Delegates" id="delegates-dropdown" className="mx-3">
                             {areas.map(x=> (
-                                <NavDropdown.Item className={'text-center'} href="#">{x}</NavDropdown.Item>
+                                <NavDropdown.Item key={x} className={'text-center'} href="#">{x}</NavDropdown.Item>
                             ))}
                         </NavDropdown>
                         <Nav.Link href="#cc" className="mx-3">CC Team</Nav.Link>

@@ -1,6 +1,6 @@
 const API_KEY = "AIzaSyA_l7WTCB04HR7s208I7dNOCzQ8LoP6jXk";
 const SHEET_ID = "11XbmhooLKQcETblBhGGhLlf-NJPaCiYyNOV-zY6oI6k";
-const RANGE = "Sheet1!A2:AC10";
+const RANGE = "Sheet1!A2:AC20";
 
 const columns = {
     'name': 2,
@@ -16,7 +16,7 @@ export async function fetchSheetData() {
     const data = await response.json();
 
     const rows = data.values;
-    const processedData = rows.map((row: object) => {
+    return rows.map((row: object) => {
         const rowData: { [key: string]: string } = {};
 
         for (const [key, index] of Object.entries(columns)) {
@@ -25,10 +25,4 @@ export async function fetchSheetData() {
 
         return rowData;
     });
-
-    console.log(processedData);
-    return processedData;
 }
-
-// https://sheets.googleapis.com/v4/spreadsheets/11XbmhooLKQcETblBhGGhLlf-NJPaCiYyNOV-zY6oI6k/values/Sheet1!A1:C10?key=993287adbe699145551ca05b80739c5eab9dfff9
-// https://sheets.googleapis.com/v4/spreadsheets/11XbmhooLKQcETblBhGGhLlf-NJPaCiYyNOV-zY6oI6k/values/Sheet1!A1:C10?key=AIzaSyA_l7WTCB04HR7s208I7dNOCzQ8LoP6jXk

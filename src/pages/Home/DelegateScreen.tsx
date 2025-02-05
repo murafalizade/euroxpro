@@ -3,19 +3,12 @@ import { motion } from "framer-motion";
 import { Row, Col, Button } from "react-bootstrap";
 import DelegateCard from "../../components/DelegateCard";
 import {fetchSheetData} from "../../service/sheetService.ts";
+import {useQuery} from "react-query";
 
 const DelegateScreen: FC = () => {
     const [delegate, setDelegates] = useState([]);
 
-    const loadDelegates = async () => {
-        const res = await fetchSheetData();
-        setDelegates(res);
-    }
-
-
-    useEffect(() => {
-        loadDelegates()
-    }, []);
+    const {data = []} = useQuery('DELEGATE_DATA', fetchSheetData)
 
     return (
         <motion.section
@@ -45,7 +38,7 @@ const DelegateScreen: FC = () => {
             </motion.h1>
 
             <Row className="justify-content-center" style={{ width: "80%", maxWidth: "1200px" }}>
-                {delegate.map((delegate, index) => (
+                {data.map((delegate, index) => (
                     <Col key={index} md={3} sm={6} className="d-flex justify-content-center mb-4">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}

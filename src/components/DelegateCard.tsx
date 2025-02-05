@@ -28,8 +28,9 @@ const DelegateCard: FC<DelegateCardProps> = ({name, lc, position, img = ''}) => 
             <img
                 src={img}
                 alt={name}
+                loading={'lazy'}
                 style={{
-                    width: "220px",
+                    width: "initial",
                     height: "180px",
                     objectFit: "cover",
                 }}
