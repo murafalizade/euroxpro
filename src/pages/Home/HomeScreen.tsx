@@ -11,11 +11,9 @@ const HomeScreen = () => {
     return (
         <>
             <div className={'home-container'}>
-                <motion.section
+                <section
+                    id={'home'}
                     className="home-overlay"
-                    initial={{opacity: 0, y: -50}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: 0.8, ease: "easeOut"}}
                 >
                     <motion.div
                         className="home-content"
@@ -54,12 +52,12 @@ const HomeScreen = () => {
                             transition={{duration: 0.6, delay: 0.5}}
                         >
                             <button className="btn btn-danger">Register Now</button>
-                            <button className="btn btn-danger">Delegate Booklet</button>
+                            <button className="btn btn-danger">Get Location</button>
                             <button className="btn btn-danger">AIESEC Shop</button>
                         </motion.div>
 
                     </motion.div>
-                </motion.section>
+                </section>
                 <div
                     style={{
                         position: 'absolute',

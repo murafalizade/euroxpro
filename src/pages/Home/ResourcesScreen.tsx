@@ -7,7 +7,7 @@ const resources = [
     { name: "DELEGATE SUPPORT FORM", link: "#" },
     { name: "FAQ", link: "#" },
     { name: "TRANSPORTATION FORM", link: "#" },
-    { name: "Shop form", link: "#" },
+    { name: "SHOP REGISTRATION", link: "#" },
     { name: "REGISTER NOW!", link: "#" },
     { name: "AGENDA", link: "#" },
     { name: "INVITATION LETTER FORM", link: "#" },
