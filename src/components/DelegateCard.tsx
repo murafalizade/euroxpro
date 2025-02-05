@@ -4,10 +4,10 @@ interface DelegateCardProps {
     name: string;
     surname: string;
     position: string;
-    pictureUrl: string;
+    img: string;
 }
 
-const DelegateCard: FC<DelegateCardProps> = ({name, surname, position, pictureUrl}) => {
+const DelegateCard: FC<DelegateCardProps> = ({name, surname, position, img}) => {
     return (
         <div
             style={{
@@ -26,7 +26,7 @@ const DelegateCard: FC<DelegateCardProps> = ({name, surname, position, pictureUr
             }}
         >
             <img
-                src={pictureUrl}
+                src={img}
                 alt={`${name} ${surname}`}
                 style={{
                     width: "100px",
