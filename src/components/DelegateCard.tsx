@@ -49,7 +49,7 @@ const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
             <img
                 src={img}
                 alt={name}
-                loading="lazy"
+                // loading="lazy"
                 onLoad={() => setImgLoaded(true)}
                 onError={() => setImgLoaded(false)} // If image fails to load, keep placeholder
                 style={{
@@ -80,7 +80,7 @@ const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
                         margin: "5px 0",
                     }}
                 >
-                    {position} - AIESEC in {lc}
+                    {position} - {lc}
                 </p>
             </div>
         </div>

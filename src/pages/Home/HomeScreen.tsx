@@ -6,6 +6,7 @@ import Feedback from "./Feedback.tsx";
 import DelegateScreen from "./DelegateScreen.tsx";
 import ResourceScreen from "./ResourcesScreen.tsx";
 import Footer from "../../components/Footer.tsx";
+import ConferenceTeamScreen from "./ConferenceTeamScreen.tsx";
 
 const HomeScreen = () => {
     return (
@@ -118,6 +119,7 @@ const HomeScreen = () => {
                 <MerchScreen/>
             </motion.div>
 
+            <ConferenceTeamScreen/>
             <DelegateScreen/>
             <ResourceScreen/>
 

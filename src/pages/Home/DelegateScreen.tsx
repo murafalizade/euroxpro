@@ -37,7 +37,7 @@ const DelegateScreen: FC = () => {
             <Row className="justify-content-center" style={{ width: "80%", maxWidth: "1200px" }}>
                 {data.map((delegate:DelegateCardProps, index:number) => (
                     <Col key={index} md={3} sm={6} className="d-flex justify-content-center mb-4">
-                            <DelegateCard img={delegate.img} name={delegate.name} lc={delegate.lc} position={delegate.position} />
+                            <DelegateCard img={delegate.img} name={delegate.name} lc={`AIESEC in ${delegate.lc}`} position={delegate.position} />
                     </Col>
                 ))}
             </Row>
