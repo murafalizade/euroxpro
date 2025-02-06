@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import Typewriter from "typewriter-effect";
 import "./HomeScreen.css";
 import MerchScreen from "./MerchScreen.tsx";
@@ -24,7 +24,7 @@ const HomeScreen = () => {
                         <h1 className="title">
                             <Typewriter
                                 options={{
-                                    loop:true
+                                    loop: true
                                 }}
                                 onInit={(typewriter) => {
                                     typewriter.typeString("EuroXPro 2025")
@@ -106,7 +106,6 @@ const HomeScreen = () => {
 
             </div>
 
-            {/* Sections with Scroll Animations */}
             <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -119,35 +118,14 @@ const HomeScreen = () => {
                 <MerchScreen/>
             </motion.div>
 
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{once: true, amount: 0.2}}
-                variants={{
-                    hidden: {opacity: 0, y: 50},
-                    visible: {opacity: 1, y: 0, transition: {duration: 0.8, delay: 0.2}}
-                }}
-            >
-                <DelegateScreen/>
-            </motion.div>
-
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{once: true, amount: 0.2}}
-                variants={{
-                    hidden: {opacity: 0, y: 50},
-                    visible: {opacity: 1, y: 0, transition: {duration: 0.8, delay: 0.4}}
-                }}
-            >
-                <ResourceScreen/>
-            </motion.div>
+            <DelegateScreen/>
+            <ResourceScreen/>
 
             <motion.section
                 initial={{opacity: 0, y: 50}}
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true, amount: 0.2}}
-                transition={{duration: 0.8, delay: 0.6}}
+                transition={{duration: 0.4, delay: 0.2}}
             >
                 <div className="d-flex">
                     <Feedback/>

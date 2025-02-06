@@ -38,13 +38,7 @@ const DelegateScreen: FC = () => {
             <Row className="justify-content-center" style={{ width: "80%", maxWidth: "1200px" }}>
                 {data.map((delegate:DelegateCardProps, index:number) => (
                     <Col key={index} md={3} sm={6} className="d-flex justify-content-center mb-4">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
                             <DelegateCard img={delegate.img} name={delegate.name} lc={delegate.lc} position={delegate.position} />
-                        </motion.div>
                     </Col>
                 ))}
             </Row>
