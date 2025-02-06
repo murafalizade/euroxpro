@@ -23,8 +23,7 @@ const DelegateScreen: FC = () => {
             id={'delegate'}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
         >
             <motion.h1
                 style={{ fontSize: "36px", marginBottom: "20px", fontWeight: "bold", textAlign: "center" }}
