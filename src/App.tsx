@@ -21,7 +21,7 @@ function App() {
             <Router>
                 <CustomNavbar />
                 <Routes>
-                    <Route path="/" element={<HomeScreen />} exact />
+                    <Route path="/" element={<HomeScreen />} />
                     <Route path="/delegates" element={<DelegateScreen />} />
                 </Routes>
             </Router>
