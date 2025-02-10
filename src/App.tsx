@@ -1,10 +1,11 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CustomNavbar from "./components/Navbar";
-import './App.css'
-import HomeScreen from "./pages/Home/HomeScreen.tsx";
-import {QueryClient, QueryClientProvider} from "react-query";
+import HomeScreen from "./pages/Home/HomeScreen";
+import { QueryClient, QueryClientProvider } from "react-query";
+import './App.css';
+import {DelegateScreen} from "./pages/Delegates/DelegateScreen.tsx";
 
 function App() {
-
     const queryClient = new QueryClient({
         defaultOptions: {
             queries: {
@@ -17,10 +18,13 @@ function App() {
 
     return (
         <QueryClientProvider client={queryClient}>
-            <>
-                <CustomNavbar/>
-                <HomeScreen/>
-            </>
+            <Router>
+                <CustomNavbar />
+                <Routes>
+                    <Route path="/" element={<HomeScreen />} exact />
+                    <Route path="/delegates" element={<DelegateScreen />} />
+                </Routes>
+            </Router>
         </QueryClientProvider>
     );
 }

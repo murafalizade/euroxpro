@@ -6,23 +6,38 @@ import "slick-carousel/slick/slick-theme.css";
 const items = [
     {
         name: "EuroXPro'25 T-Shirt",
-        price: "$12.00",
+        price: "€12.00",
         img: "t-shirt.png",
     },
     {
         name: "EuroXPro'25 Hoodie",
-        price: "$30.00",
-        img: "t-shirt.png",
+        price: "€30.00",
+        img: "euroxproHoodie.png",
     },
     {
-        name: "Hoodie EuroXPro'25",
-        price: "$40.00",
-        img: "t-shirt.png",
+        name: "United Exchange Hoodie",
+        price: "€25.00",
+        img: "europeHoodie.png",
     },
     {
-        name: "Poster EuroXPro'25",
-        price: "$10.00",
-        img: "t-shirt.png",
+        name: "United Exchange T-shirt",
+        price: "€12.00",
+        img: "europeTshirt.png",
+    },
+    {
+        name: "Italy Green T-shirt",
+        price: "€12.00",
+        img: "italyGreenTshirt.png",
+    },
+    {
+        name: "Italy Red T-shirt",
+        price: "€12.00",
+        img: "italyRedTshirt.png",
+    },
+    {
+        name: "United Exchange Tote Bag",
+        price: "€10.00",
+        img: "toteBag.png",
     },
 ];
 

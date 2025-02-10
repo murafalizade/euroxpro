@@ -23,7 +23,7 @@
 /* Image styling */
 .shop-card-image {
     padding: 6px;
-    width: 100%;
+    width: 80%;
     height: 200px;
     object-fit: cover;
     border-bottom: 1px solid #eee;

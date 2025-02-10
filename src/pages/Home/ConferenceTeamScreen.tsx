@@ -70,13 +70,6 @@ const ConferenceTeamScreen: FC = () => {
                     <DelegateCard img={''} name={'Test test'} lc={'Conference Manager'} position={'+33 1232 2323 21'} />
                 </Col>
             </Row>
-
-            <Button
-                variant="danger"
-                style={{ marginTop: "20px" }}
-            >
-                Show More
-            </Button>
         </motion.section>
     );
 };

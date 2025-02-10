@@ -14,17 +14,13 @@ const MerchSection = () => {
                 padding: "20px",
             }}
         >
-            {/* Title Section */}
             <h1 style={{ fontSize: "36px", marginBottom: "20px", fontWeight: "bold" }}>
                 EuroXPro'25 Merch
             </h1>
 
-            {/* Shop Carousel */}
             <ShopCarousel />
-
-            {/* Buy All Button */}
             <a
-                href="https://example.com/shop"
+                href="https://aiesecitaly.typeform.com/ShopEuroXpro25"
                 style={{
                     marginTop: "20px",
                     padding: "12px 20px",

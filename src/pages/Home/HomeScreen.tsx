@@ -52,9 +52,9 @@ const HomeScreen = () => {
                             animate={{opacity: 1, scale: 1}}
                             transition={{duration: 0.6, delay: 0.5}}
                         >
-                            <button className="btn btn-danger">Register Now</button>
+                            <a href={'https://aiesecitaly.typeform.com/REuroXpro25'} className="btn btn-danger">Register Now</a>
                             <button className="btn btn-danger">Get Location</button>
-                            <button className="btn btn-danger">AIESEC Shop</button>
+                            <a href={'https://aiesecitaly.typeform.com/ShopEuroXpro25'} className="btn btn-danger">AIESEC Shop</a>
                         </motion.div>
 
                     </motion.div>

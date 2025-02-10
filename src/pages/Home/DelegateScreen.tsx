@@ -42,12 +42,13 @@ const DelegateScreen: FC = () => {
                 ))}
             </Row>
 
-            <Button
-                variant="danger"
+            <a
+                href={'/delegates'}
+                className={'btn btn-danger'}
                 style={{ marginTop: "20px" }}
             >
               Show More
-            </Button>
+            </a>
         </motion.section>
     );
 };
