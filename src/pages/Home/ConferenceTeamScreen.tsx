@@ -1,6 +1,6 @@
 import {FC} from "react";
 import { motion } from "framer-motion";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import DelegateCard from "../../components/DelegateCard";
 
 const ConferenceTeamScreen: FC = () => {

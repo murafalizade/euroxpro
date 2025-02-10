@@ -1,6 +1,6 @@
 import {FC} from "react";
 import { motion } from "framer-motion";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import DelegateCard, {DelegateCardProps} from "../../components/DelegateCard";
 import {fetchSheetData} from "../../service/sheetService.ts";
 import {useQuery} from "react-query";
