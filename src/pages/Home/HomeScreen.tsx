@@ -7,6 +7,7 @@ import DelegateScreen from "./DelegateScreen.tsx";
 import ResourceScreen from "./ResourcesScreen.tsx";
 import Footer from "../../components/Footer.tsx";
 import ConferenceTeamScreen from "./ConferenceTeamScreen.tsx";
+import ItalyExploreScreen from "./ItalyExploreScreen.tsx";
 
 const HomeScreen = () => {
     return (
@@ -52,9 +53,11 @@ const HomeScreen = () => {
                             animate={{opacity: 1, scale: 1}}
                             transition={{duration: 0.6, delay: 0.5}}
                         >
-                            <a href={'https://aiesecitaly.typeform.com/REuroXpro25'} className="btn btn-danger">Register Now</a>
+                            <a href={'https://aiesecitaly.typeform.com/REuroXpro25'} className="btn btn-danger">Register
+                                Now</a>
                             <button className="btn btn-danger">Get Location</button>
-                            <a href={'https://aiesecitaly.typeform.com/ShopEuroXpro25'} className="btn btn-danger">AIESEC Shop</a>
+                            <a href={'https://aiesecitaly.typeform.com/ShopEuroXpro25'} className="btn btn-danger">AIESEC
+                                Shop</a>
                         </motion.div>
 
                     </motion.div>
@@ -71,7 +74,7 @@ const HomeScreen = () => {
                         width: '100%',
                     }}
                 >
-                    <a href="#merch">
+                    <a href="#italy">
                         <div
                             style={{
                                 display: 'flex',
@@ -106,6 +109,19 @@ const HomeScreen = () => {
                 </div>
 
             </div>
+
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true, amount: 0.2}}
+                variants={{
+                    hidden: {opacity: 0, y: 50},
+                    visible: {opacity: 1, y: 0, transition: {duration: 0.8}}
+                }}
+            >
+                <ItalyExploreScreen/>
+            </motion.div>
+
 
             <motion.div
                 initial="hidden"

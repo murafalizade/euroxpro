@@ -49,15 +49,15 @@ const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
             <img
                 src={img}
                 alt={name}
-                // loading="lazy"
+                rel="preload"
                 onLoad={() => setImgLoaded(true)}
-                onError={() => setImgLoaded(false)} // If image fails to load, keep placeholder
+                onError={() => setImgLoaded(false)}
                 style={{
                     width: "100%",
                     height: "180px",
                     objectFit: "cover",
                     borderRadius: "8px",
-                    display: imgLoaded ? "block" : "none", // Hide image until loaded
+                    display: imgLoaded ? "block" : "none",
                 }}
             />
 

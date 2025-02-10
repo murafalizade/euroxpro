@@ -1,17 +1,17 @@
 import Slider from "react-slick";
-import ShopCard from "./ShopCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ShopCard from "./ShopCard.tsx";
 
 const items = [
     {
-        name: "EuroXPro'25 T-Shirt",
+        name: "Veneci Canal",
         price: "€12.00",
         img: "t-shirt.png",
     },
     {
-        name: "EuroXPro'25 Hoodie",
-        price: "€30.00",
+        name: "Colosseum",
+        price: "Roma",
         img: "euroxproHoodie.png",
     },
     {
@@ -46,7 +46,7 @@ const items = [
     },
 ];
 
-const ShopCarousel = () => {
+const ItalyCarousel = () => {
     const settings = {
         infinite: true,
         speed: 500,
@@ -96,13 +96,12 @@ const ShopCarousel = () => {
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', padding: '20px'}}>
             <div style={{width: '80vw'}}>
                 <Slider {...settings}>
-                    {items.map((item, index) => (
+                    {items.map((item) => (
                         <ShopCard
-                            key={index}
+                            altText={item.name}
                             name={item.name}
                             price={item.price}
                             imgSrc={item.img}
-                            altText={item.name}
                         />
                     ))}
                 </Slider>
@@ -111,4 +110,4 @@ const ShopCarousel = () => {
     );
 };
 
-export default ShopCarousel;
+export default ItalyCarousel;

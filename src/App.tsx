@@ -3,7 +3,7 @@ import CustomNavbar from "./components/Navbar";
 import HomeScreen from "./pages/Home/HomeScreen";
 import { QueryClient, QueryClientProvider } from "react-query";
 import './App.css';
-import {DelegateScreen} from "./pages/Delegates/DelegateScreen.tsx";
+import DelegateScreen from "./pages/Delegates/DelegateScreen.tsx";
 
 function App() {
     const queryClient = new QueryClient({
