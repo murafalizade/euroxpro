@@ -13,6 +13,10 @@ const HomeScreen = () => {
     return (
         <>
             <div className={'home-container'}>
+                <video autoPlay loop muted playsInline>
+                    <source src="/italy_video.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
                 <section
                     id={'home'}
                     className="home-overlay"
@@ -72,6 +76,7 @@ const HomeScreen = () => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         width: '100%',
+                        zIndex: 3
                     }}
                 >
                     <a href="#italy">

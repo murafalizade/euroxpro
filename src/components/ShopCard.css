@@ -29,6 +29,12 @@
     border-bottom: 1px solid #eee;
 }
 
+.italy-card-image {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
 /* Card Info section */
 .shop-card-info {
     padding: 0 15px;

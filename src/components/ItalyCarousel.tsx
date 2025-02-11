@@ -5,45 +5,30 @@ import ShopCard from "./ShopCard.tsx";
 
 const items = [
     {
-        name: "Veneci Canal",
-        price: "€12.00",
-        img: "t-shirt.png",
-    },
-    {
-        name: "Colosseum",
+        name: "Colessium",
         price: "Roma",
-        img: "euroxproHoodie.png",
+        img: "colessium.webp",
     },
     {
-        name: "United Exchange Hoodie",
-        price: "€25.00",
-        img: "europeHoodie.png",
+        name: "Como Lake",
+        price: "Lombardy",
+        img: "lake_como.png",
     },
     {
-        name: "United Exchange T-shirt",
-        price: "€12.00",
-        img: "europeTshirt.png",
+        name: "Pisa Tower",
+        price: "Pisa",
+        img: "pisa.jpg",
     },
     {
-        name: "Italy Green T-shirt",
-        price: "€12.00",
-        img: "italyGreenTshirt.png",
+        name: "St. Peter’s Basilica",
+        price: "Vatican City, Rome",
+        img: "beter.avif",
     },
     {
-        name: "Italy Red T-shirt",
-        price: "€12.00",
-        img: "italyRedTshirt.png",
-    },
-    {
-        name: "United Exchange Tote Bag",
-        price: "€10.00",
-        img: "toteBag.png",
-    },
-    {
-        name: "EuroXpro'25 Lighter",
-        price: "€10.00",
-        img: "lighter.png",
-    },
+        name: "Duomo di Milano",
+        price: "Milan",
+        img: "milan.jpg",
+    }
 ];
 
 const ItalyCarousel = () => {
@@ -98,6 +83,7 @@ const ItalyCarousel = () => {
                 <Slider {...settings}>
                     {items.map((item) => (
                         <ShopCard
+                            isItaly={true}
                             altText={item.name}
                             name={item.name}
                             price={item.price}
