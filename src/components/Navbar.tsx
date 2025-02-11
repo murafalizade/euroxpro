@@ -31,18 +31,18 @@ const CustomNavbar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link href="/" className="mx-3">Home</Nav.Link>
-                        <Nav.Link href="/#merch" className="mx-3">Merch</Nav.Link>
+                        <Nav.Link href="/merch" className="mx-3">Merch</Nav.Link>
                         <Nav.Link href="/" className="mx-3">Agenda</Nav.Link>
                         <NavDropdown title="Delegates" id="delegates-dropdown" className="mx-3">
-                            <NavDropdown.Item className={'text-center'} href={`/delegates`}>All</NavDropdown.Item>
+                            <NavDropdown.Item href={`/delegates`}>All</NavDropdown.Item>
                             {areas.map(x=> (
-                                <NavDropdown.Item key={x} className={'text-center'} href={`/delegates?position=${x}`}>{x}</NavDropdown.Item>
+                                <NavDropdown.Item key={x}  href={`/delegates?position=${x}`}>{x}</NavDropdown.Item>
                             ))}
                         </NavDropdown>
-                        <Nav.Link href="#cc" className="mx-3">CC Team</Nav.Link>
+                        <Nav.Link href="/cc" className="mx-3">CC Team</Nav.Link>
                         <NavDropdown title="Help" id="help-dropdown" className="mx-3">
-                            <NavDropdown.Item className={'text-center'} href="#resources">Resources</NavDropdown.Item>
-                            <NavDropdown.Item className={'text-center'} href="#">Feedback</NavDropdown.Item>
+                            <NavDropdown.Item href="/resources">Resources</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Feedback</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>

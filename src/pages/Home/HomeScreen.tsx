@@ -1,12 +1,6 @@
 import {motion} from "framer-motion";
 import Typewriter from "typewriter-effect";
 import "./HomeScreen.css";
-import MerchScreen from "./MerchScreen.tsx";
-import Feedback from "./Feedback.tsx";
-import DelegateScreen from "./DelegateScreen.tsx";
-import ResourceScreen from "./ResourcesScreen.tsx";
-import Footer from "../../components/Footer.tsx";
-import ConferenceTeamScreen from "./ConferenceTeamScreen.tsx";
 import ItalyExploreScreen from "./ItalyExploreScreen.tsx";
 
 const HomeScreen = () => {
@@ -57,10 +51,10 @@ const HomeScreen = () => {
                             animate={{opacity: 1, scale: 1}}
                             transition={{duration: 0.6, delay: 0.5}}
                         >
-                            <a href={'https://aiesecitaly.typeform.com/REuroXpro25'} className="btn btn-danger">Register
+                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/REuroXpro25'} className="btn btn-danger">Register
                                 Now</a>
-                            <button className="btn btn-danger">Get Location</button>
-                            <a href={'https://aiesecitaly.typeform.com/ShopEuroXpro25'} className="btn btn-danger">AIESEC
+                            <a target={'_blank'} href={'https://maps.app.goo.gl/bSoxj6m21DaHheSK8'} className="btn btn-danger">Get Location</a>
+                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/ShopEuroXpro25'} className="btn btn-danger">AIESEC
                                 Shop</a>
                         </motion.div>
 
@@ -69,7 +63,7 @@ const HomeScreen = () => {
                 <div
                     style={{
                         position: 'absolute',
-                        bottom: '3rem', // Adjust based on your needs
+                        bottom: '3rem',
                         left: '50%',
                         transform: 'translateX(-50%)',
                         display: 'flex',
@@ -126,35 +120,6 @@ const HomeScreen = () => {
             >
                 <ItalyExploreScreen/>
             </motion.div>
-
-
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{once: true, amount: 0.2}}
-                variants={{
-                    hidden: {opacity: 0, y: 50},
-                    visible: {opacity: 1, y: 0, transition: {duration: 0.8}}
-                }}
-            >
-                <MerchScreen/>
-            </motion.div>
-
-            <ConferenceTeamScreen/>
-            <DelegateScreen/>
-            <ResourceScreen/>
-
-            <motion.section
-                initial={{opacity: 0, y: 50}}
-                whileInView={{opacity: 1, y: 0}}
-                viewport={{once: true, amount: 0.2}}
-                transition={{duration: 0.4, delay: 0.2}}
-            >
-                <div className="d-flex">
-                    <Feedback/>
-                </div>
-            </motion.section>
-            <Footer/>
         </>
     );
 };

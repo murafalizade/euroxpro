@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from "react-bootstrap";
-import './Resources.css'
+import "./Resources.css";
 
 const resources = [
     { name: "DELEGATE SUPPORT FORM", link: "#" },
@@ -23,7 +23,7 @@ const ResourceScreen: FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="py-5"
+            className="vh-100 vw-100 d-flex align-items-center justify-content-center text-center"
         >
             <Container>
                 <motion.h2
@@ -40,7 +40,7 @@ const ResourceScreen: FC = () => {
                         <Col key={index} xs={12} sm={6} md={4}>
                             <motion.a
                                 href={resource.link}
-                                className="d-flex justify-content-center align-items-center text-decoration-none resource-item"
+                                className="resource-item text-decoration-none"
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.4, delay: index * 0.1 }}

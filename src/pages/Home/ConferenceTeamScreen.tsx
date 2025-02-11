@@ -22,7 +22,7 @@ const ConferenceTeamScreen: FC = () => {
             transition={{duration: 0.2, ease: "easeOut"}}
         >
             <motion.h1
-                style={{fontSize: "36px", marginBottom: "20px", fontWeight: "bold", textAlign: "center"}}
+                style={{fontSize: "36px", marginTop: '100px', marginBottom: "20px", fontWeight: "bold", textAlign: "center"}}
                 initial={{opacity: 0, y: -20}}
                 whileInView={{opacity: 1, y: 0}}
                 transition={{duration: 0.5, delay: 0.2}}
