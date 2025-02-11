@@ -11,7 +11,7 @@ const DelegateScreen: FC = () => {
     const position = searchParams.get("position")
 
     const {data = []} = useQuery('ALL_DELEGATE_DATA', fetchAllSheetData, {
-        select: (data) => {
+        select: (data: any) => {
             if(position){
                 return data.filter(x=> x.position === position)
             }
