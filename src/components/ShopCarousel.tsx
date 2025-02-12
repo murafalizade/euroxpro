@@ -98,7 +98,6 @@ const ShopCarousel = () => {
                 <Slider {...settings}>
                     {items.map((item, index) => (
                         <ShopCard
-                            isItaly={false}
                             key={index}
                             name={item.name}
                             price={item.price}

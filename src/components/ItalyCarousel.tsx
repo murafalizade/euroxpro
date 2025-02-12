@@ -1,35 +1,41 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ShopCard from "./ShopCard.tsx";
+import ItalyCard from "./ItalyCard.tsx";
 
 const items = [
     {
-        name: "Colessium",
-        price: "Roma",
+        name: "Colosseum",
+        price: "Rome",
         img: "colessium.webp",
+        desc: "An ancient amphitheater in Rome, the Colosseum is one of the most iconic symbols of the Roman Empire, known for its gladiatorial battles and grandeur."
     },
     {
-        name: "Como Lake",
+        name: "Lake Como",
         price: "Lombardy",
         img: "lake_como.png",
+        desc: "A breathtaking glacial lake surrounded by the Alps, Lake Como is famous for its picturesque villages, luxury villas, and serene waters."
     },
     {
-        name: "Pisa Tower",
+        name: "Leaning Tower of Pisa",
         price: "Pisa",
         img: "pisa.jpg",
+        desc: "A world-famous architectural marvel, the Leaning Tower of Pisa is known for its unintended tilt, making it a popular attraction in Italy."
     },
     {
         name: "St. Peter’s Basilica",
         price: "Vatican City, Rome",
         img: "beter.avif",
+        desc: "One of the most significant churches in Christianity, St. Peter’s Basilica is a masterpiece of Renaissance architecture, home to Michelangelo’s Pietà."
     },
     {
         name: "Duomo di Milano",
         price: "Milan",
         img: "milan.jpg",
+        desc: "A Gothic masterpiece, the Duomo di Milano is the largest church in Italy, featuring intricate spires, statues, and a breathtaking view from the rooftop."
     }
 ];
+
 
 const ItalyCarousel = () => {
     const settings = {
@@ -82,8 +88,8 @@ const ItalyCarousel = () => {
             <div style={{width: '80vw'}}>
                 <Slider {...settings}>
                     {items.map((item) => (
-                        <ShopCard
-                            isItaly={true}
+                        <ItalyCard
+                            desc={item.desc}
                             altText={item.name}
                             name={item.name}
                             price={item.price}

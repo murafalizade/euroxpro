@@ -6,13 +6,12 @@ interface ShopCardProps {
     price: string;
     imgSrc: string;
     altText: string;
-    isItaly: boolean
 }
 
-const ShopCard: FC<ShopCardProps> = ({ name, price, imgSrc, altText, isItaly = false }) => {
+const ShopCard: FC<ShopCardProps> = ({ name, price, imgSrc, altText }) => {
     return (
         <div className="shop-card">
-            <img src={imgSrc} alt={altText} className={isItaly? "italy-card-image" :"shop-card-image"} />
+            <img src={imgSrc} alt={altText} className={"shop-card-image"} />
             <div className="shop-card-info">
                 <h3 className="shop-card-name">{name}</h3>
                 <p className="shop-card-price">{price}</p>
