@@ -42,7 +42,7 @@ const CustomNavbar = () => {
                         <Nav.Link href="/cc" className="mx-3">CC Team</Nav.Link>
                         <NavDropdown title="Help" id="help-dropdown" className="mx-3">
                             <NavDropdown.Item href="/resources">Resources</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Feedback</NavDropdown.Item>
+                            <NavDropdown.Item href="/feedback">Feedback</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
