@@ -25,7 +25,7 @@ const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
                 boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 cursor: "pointer",
-                margin: "15px",
+                // margin: "15px",
             }}
         >
             {!imgLoaded && (

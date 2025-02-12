@@ -5,7 +5,7 @@ import ItalyExploreScreen from "./ItalyExploreScreen.tsx";
 
 const HomeScreen = () => {
     return (
-        <>
+        <main>
             <div className={'home-container'}>
                 <video autoPlay loop muted playsInline>
                     <source src="/italy_video.mp4" type="video/mp4"/>
@@ -120,7 +120,7 @@ const HomeScreen = () => {
             >
                 <ItalyExploreScreen/>
             </motion.div>
-        </>
+        </main>
     );
 };
 

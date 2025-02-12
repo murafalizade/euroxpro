@@ -22,6 +22,18 @@ const Feedback: FC = () => {
     };
 
     return (
+        <main
+            style={{
+                marginTop: "80px",
+                width: "100vw",
+                minHeight: "100vh",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "20px",
+            }}
+        >
         <Container fluid className="p-5">
             <Row className="align-items-center">
                 {/* Left Section - Form */}
@@ -68,13 +80,12 @@ const Feedback: FC = () => {
                         </Button>
                     </Form>
                 </Col>
-
-                {/* Right Section - Image */}
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
                     <img src="./europe.png" alt="Europe" className="img-fluid" style={{ maxWidth: "80%", width: '450px'}} />
                 </Col>
             </Row>
         </Container>
+        </main>
     );
 };
 

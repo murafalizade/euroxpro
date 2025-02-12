@@ -4,21 +4,20 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./Resources.css";
 
 const resources = [
-    { name: "DELEGATE SUPPORT FORM", link: "#" },
+    { name: "DELEGATE SUPPORT FORM", link: "https://aiesecitaly.typeform.com/to/YO7QDSsX" },
     { name: "FAQ", link: "#" },
     { name: "TRANSPORTATION FORM", link: "#" },
-    { name: "SHOP REGISTRATION", link: "#" },
-    { name: "REGISTER NOW!", link: "#" },
+    { name: "SHOP REGISTRATION", link: "https://aiesecitaly.typeform.com/ShopEuroXpro25" },
+    { name: "REGISTER NOW!", link: "https://aiesecitaly.typeform.com/REuroXpro25" },
     { name: "AGENDA", link: "#" },
-    { name: "INVITATION LETTER FORM", link: "#" },
-    { name: "BOOKLET", link: "#" },
+    { name: "INVITATION LETTER FORM", link: "https://aiesecitaly.typeform.com/ILEuroXpro25" },
+    { name: "BOOKLET", link: "https://drive.google.com/drive/u/1/folders/1a4XftlYlxY06dYLEQmFLk4OU1jSZolPJ?fbclid=PAZXh0bgNhZW0CMTEAAabk_mbG8Q9jEq7fOgMlU9m8EG7t6NK11UKPgxbboCqvg8uetr_BflERODc_aem_YnII5R1stvP-o1r0Q153wA" },
     { name: "PICTURES", link: "#" },
 ];
 
 const ResourceScreen: FC = () => {
     return (
-        <motion.section
-            id="resources"
+        <motion.main
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -51,7 +50,7 @@ const ResourceScreen: FC = () => {
                     ))}
                 </Row>
             </Container>
-        </motion.section>
+        </motion.main>
     );
 };
 

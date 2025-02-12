@@ -8,6 +8,7 @@ import ConferenceTeamScreen from "./pages/Home/ConferenceTeamScreen.tsx";
 import MerchScreen from "./pages/Home/MerchScreen.tsx";
 import ResourceScreen from "./pages/Home/ResourcesScreen.tsx";
 import Footer from "./components/Footer.tsx";
+import Feedback from "./pages/Home/Feedback.tsx";
 
 function App() {
     const queryClient = new QueryClient({
@@ -30,6 +31,7 @@ function App() {
                     <Route path={"/merch"} element={<MerchScreen />} />
                     <Route path={"/resources"} element={<ResourceScreen />} />
                     <Route path="/delegates" element={<DelegateScreen />} />
+                    <Route path="/feedback" element={<Feedback />} />
                 </Routes>
                 <Footer/>
             </Router>

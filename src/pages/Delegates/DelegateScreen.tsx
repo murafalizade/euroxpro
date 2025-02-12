@@ -38,7 +38,7 @@ const DelegateScreen: FC = () => {
     };
 
     return (
-        <section
+        <main
             style={{
                 marginTop: "180px",
                 width: "100vw",
@@ -49,7 +49,6 @@ const DelegateScreen: FC = () => {
                 alignItems: "center",
                 padding: "20px",
             }}
-            id={"delegate"}
         >
             <motion.h1
                 style={{
@@ -143,8 +142,8 @@ const DelegateScreen: FC = () => {
                                     src={selectedDelegate.img}
                                     alt={selectedDelegate.name}
                                     style={{
-                                        width: "80px",
-                                        height: "80px",
+                                        width: "140px",
+                                        height: "140px",
                                         borderRadius: "50%",
                                         objectFit: "cover",
                                     }}
@@ -198,8 +197,8 @@ const DelegateScreen: FC = () => {
                                     src={selectedDelegate.img}
                                     alt={selectedDelegate.name}
                                     style={{
-                                        width: "80px",
-                                        height: "80px",
+                                        width: "140px",
+                                        height: "140px",
                                         borderRadius: "50%",
                                         objectFit: "cover",
                                     }}
@@ -222,7 +221,7 @@ const DelegateScreen: FC = () => {
                     )}
                 </Offcanvas.Body>
             </Offcanvas>
-        </section>
+        </main>
     );
 };
 

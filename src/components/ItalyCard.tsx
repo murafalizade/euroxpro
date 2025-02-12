@@ -20,14 +20,13 @@ const ItalyCard: FC<ItalyCardProps> = ({ name, price, imgSrc, altText, desc }) =
         >
             <img src={imgSrc} alt={altText} className="italy-card-image" />
 
-            {/* Name always visible at bottom */}
             <div className="italy-card-footer">
                 <p className="italy-card-name">{name}</p>
             </div>
 
             {/* Hover overlay for description and price */}
             <div className={`info-overlay ${hovered ? "show" : ""}`}>
-                <h3 className="italy-card-name">{name}</h3>
+                <h3 className="italy-card-name mt-2">{name}</h3>
                 <p className="italy-card-price">{price}</p>
                 <p className="italy-card-desc">{desc}</p>
             </div>
