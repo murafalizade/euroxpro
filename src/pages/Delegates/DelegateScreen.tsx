@@ -204,12 +204,9 @@ const DelegateScreen: FC = () => {
                                     }}
                                 />
                                 <div>
-                                    <h4 style={{ marginBottom: "5px" }}>{selectedDelegate.name}</h4>
-                                    <p style={{ margin: "0", fontSize: "14px" }}>
-                                        <strong>LC:</strong> {selectedDelegate.lc}
-                                    </p>
-                                    <p style={{ margin: "0", fontSize: "14px" }}>
-                                        <strong>Entity:</strong> {selectedDelegate.entity}
+                                    <h4 style={{marginBottom: "5px"}}>{selectedDelegate.name}</h4>
+                                    <p style={{margin: "0", fontSize: "14px"}}>
+                                        {selectedDelegate.lc} - {selectedDelegate.entity}
                                     </p>
                                 </div>
                             </div>
@@ -218,9 +215,9 @@ const DelegateScreen: FC = () => {
                                 <strong>Email:</strong> {selectedDelegate.email}
                             </p>
                             <p>
-                                <strong>Phone:</strong> {selectedDelegate.phone}
+                                <strong>Phone:</strong> {selectedDelegate.phoneNumber}
                             </p>
-                            <Button variant="danger" href={`https://wa.me/${selectedDelegate.phone}`}>
+                            <Button variant="danger" href={`https://wa.me/${selectedDelegate.phoneNumber}`}>
                                 Contact
                             </Button>
                         </>
