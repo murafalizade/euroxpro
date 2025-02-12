@@ -151,10 +151,7 @@ const DelegateScreen: FC = () => {
                                 <div>
                                     <h4 style={{ marginBottom: "5px" }}>{selectedDelegate.name}</h4>
                                     <p style={{ margin: "0", fontSize: "14px" }}>
-                                        <strong>LC:</strong> {selectedDelegate.lc}
-                                    </p>
-                                    <p style={{ margin: "0", fontSize: "14px" }}>
-                                        <strong>Entity:</strong> {selectedDelegate.entity}
+                                        {selectedDelegate.lc} - {selectedDelegate.entity}
                                     </p>
                                 </div>
                             </div>
