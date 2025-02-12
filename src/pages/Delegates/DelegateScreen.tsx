@@ -32,7 +32,7 @@ const DelegateScreen: FC = () => {
         }
     }, [data]);
 
-    const handleSelectDelegate = (delegate: DelegateCardProps) => {
+    const handleSelectDelegate = (delegate: any) => {
         setSelectedDelegate(delegate);
         setShowSidebar(true);
     };
