@@ -5,7 +5,8 @@ const columns: Record<string, number>= {
     'name': 2,
     'phoneNumber': 5,
     'position': 11,
-    'lc': 10,
+    'entity': 10,
+    'lc': 13,
     'img': 29
 };
 

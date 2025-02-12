@@ -20,8 +20,8 @@ const ItalyCard: FC<ItalyCardProps> = ({ name, price, imgSrc, altText, desc }) =
         >
             <div className={`info-overlay ${hovered ? "show" : ""}`}>
                 <h3 className="italy-card-name">{name}</h3>
-                <p className="shop-card-price">{price}</p>
-                <p className="shop-card-desc">{desc}</p>
+                <p className="italy-card-price">{price}</p>
+                <p className="italy-card-desc">{desc}</p>
             </div>
             <img src={imgSrc} alt={altText} className="italy-card-image" />
         </div>
