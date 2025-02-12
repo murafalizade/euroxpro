@@ -86,9 +86,9 @@ const DelegateScreen: FC = () => {
                     value={selectedCountry}
                     onChange={(e) => setSelectedCountry(e.target.value)}
                 >
-                    <option value="">Select the entity</option>
+                    <option className={'text-dark'} value="">Select the entity</option>
                     {countries.map((country, index) => (
-                        <option key={index} value={country}>
+                        <option key={index} value={country} className={'text-dark'}>
                             {country}
                         </option>
                     ))}
@@ -151,7 +151,7 @@ const DelegateScreen: FC = () => {
                                 <div>
                                     <h4 style={{ marginBottom: "5px" }}>{selectedDelegate.name}</h4>
                                     <p style={{ margin: "0", fontSize: "14px" }}>
-                                        {selectedDelegate.lc} - {selectedDelegate.entity}
+                                        {selectedDelegate.lc} - AIESEC in {selectedDelegate.entity}
                                     </p>
                                 </div>
                             </div>
@@ -206,7 +206,7 @@ const DelegateScreen: FC = () => {
                                 <div>
                                     <h4 style={{marginBottom: "5px"}}>{selectedDelegate.name}</h4>
                                     <p style={{margin: "0", fontSize: "14px"}}>
-                                        {selectedDelegate.lc} - {selectedDelegate.entity}
+                                        {selectedDelegate.lc} - AIESEC in {selectedDelegate.entity}
                                     </p>
                                 </div>
                             </div>
