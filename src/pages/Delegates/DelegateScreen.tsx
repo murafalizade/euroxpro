@@ -13,7 +13,7 @@ const DelegateScreen: FC = () => {
     const [countries, setCountries] = useState([])
 
     const { data = [] } = useQuery("ALL_DELEGATE_DATA", fetchAllSheetData, {
-        select: (data) => {
+        select: (data: any) => {
             if (position) {
                 data = data.filter((x) => x.position === position);
             }
