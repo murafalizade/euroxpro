@@ -1,6 +1,6 @@
-import {FC, useEffect, useState} from "react";
+import { FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Row, Col, Form, Badge } from "react-bootstrap";
+import { Row, Col, Form, Badge, Offcanvas, Button } from "react-bootstrap";
 import DelegateCard, { DelegateCardProps } from "../../components/DelegateCard";
 import { fetchAllSheetData } from "../../service/sheetService.ts";
 import { useQuery } from "react-query";
@@ -10,7 +10,9 @@ const DelegateScreen: FC = () => {
     const [searchParams] = useSearchParams();
     const position = searchParams.get("position");
     const [selectedCountry, setSelectedCountry] = useState<string>("");
-    const [countries, setCountries] = useState([])
+    const [countries, setCountries] = useState<string[]>([]);
+    const [selectedDelegate, setSelectedDelegate] = useState<DelegateCardProps | null>(null);
+    const [showSidebar, setShowSidebar] = useState(false);
 
     const { data = [] } = useQuery("ALL_DELEGATE_DATA", fetchAllSheetData, {
         select: (data: any) => {
@@ -25,10 +27,15 @@ const DelegateScreen: FC = () => {
     });
 
     useEffect(() => {
-        if(countries.length === 0){
-            setCountries(Array.from(new Set(data.map((x) => x.entity))))
+        if (countries.length === 0) {
+            setCountries(Array.from(new Set(data.map((x) => x.entity))));
         }
     }, [data]);
+
+    const handleSelectDelegate = (delegate: DelegateCardProps) => {
+        setSelectedDelegate(delegate);
+        setShowSidebar(true);
+    };
 
     return (
         <section
@@ -58,7 +65,7 @@ const DelegateScreen: FC = () => {
                 {position ? `${position} - ` : ""} Delegates
             </motion.h1>
 
-            {/* Filter section */}
+            {/* Filter Section */}
             <div
                 style={{
                     display: "flex",
@@ -74,14 +81,14 @@ const DelegateScreen: FC = () => {
                         borderRadius: "8px",
                         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                         padding: "10px",
-                        color: 'black'
+                        color: "black",
                     }}
                     value={selectedCountry}
                     onChange={(e) => setSelectedCountry(e.target.value)}
                 >
-                    <option value="" style={{color:'black'}}>Select the entity</option>
+                    <option value="">Select the entity</option>
                     {countries.map((country, index) => (
-                        <option key={index} value={country} style={{color: 'black'}}>
+                        <option key={index} value={country}>
                             {country}
                         </option>
                     ))}
@@ -91,18 +98,138 @@ const DelegateScreen: FC = () => {
                 </Badge>
             </div>
 
+            {/* Delegate Cards */}
             <Row className="justify-content-center" style={{ width: "80%", maxWidth: "1200px" }}>
                 {data.map((delegate: DelegateCardProps, index: number) => (
-                    <Col key={index} md={3} sm={2} xs={12} className="d-flex justify-content-center mb-4">
-                        <DelegateCard
-                            img={delegate.img}
-                            name={delegate.name}
-                            lc={`AIESEC in ${delegate.lc}`}
-                            position={delegate.position}
-                        />
+                    <Col key={index} md={3} sm={6} xs={12} className="d-flex justify-content-center mb-4">
+                        <div onClick={() => handleSelectDelegate(delegate)} style={{ cursor: "pointer" }}>
+                            <DelegateCard
+                                img={delegate.img}
+                                name={delegate.name}
+                                lc={`AIESEC in ${delegate.lc}`}
+                                position={delegate.position}
+                            />
+                        </div>
                     </Col>
                 ))}
             </Row>
+
+            {/* Sidebar */}
+            <Offcanvas
+                show={showSidebar}
+                onHide={() => setShowSidebar(false)}
+                placement="end"
+                style={{ width: "400px" }}
+                className="d-none d-md-block bg-dark text-light"
+            >
+                <Offcanvas.Header closeButton closeVariant="white">
+                    <Offcanvas.Title>Delegate Details</Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                    {selectedDelegate && (
+                        <>
+                            {/* Image, Name, LC, Entity in one row */}
+                            <div
+                                style={{
+                                    display: "flex",
+                                    alignItems: "start",
+                                    justifyContent: "left",
+                                    gap: "30px",
+                                    marginBottom: "15px",
+                                }}
+                            >
+                                <img
+                                    src={selectedDelegate.img}
+                                    alt={selectedDelegate.name}
+                                    style={{
+                                        width: "80px",
+                                        height: "80px",
+                                        borderRadius: "50%",
+                                        objectFit: "cover",
+                                    }}
+                                />
+                                <div>
+                                    <h4 style={{ marginBottom: "5px" }}>{selectedDelegate.name}</h4>
+                                    <p style={{ margin: "0", fontSize: "14px" }}>
+                                        <strong>LC:</strong> {selectedDelegate.lc}
+                                    </p>
+                                    <p style={{ margin: "0", fontSize: "14px" }}>
+                                        <strong>Entity:</strong> {selectedDelegate.entity}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p>
+                                <strong>Email:</strong> {selectedDelegate.email}
+                            </p>
+                            <p>
+                                <strong>Phone:</strong> {selectedDelegate.phoneNumber}
+                            </p>
+                            <Button variant="danger" href={`https://wa.me/${selectedDelegate.phoneNumber}`}>
+                                Contact
+                            </Button>
+                        </>
+                    )}
+                </Offcanvas.Body>
+            </Offcanvas>
+
+            {/* Full-Screen Sidebar for Mobile */}
+            <Offcanvas
+                show={showSidebar}
+                onHide={() => setShowSidebar(false)}
+                placement="bottom"
+                className="d-md-none bg-dark text-light"
+                style={{ height: "100vh", width: "100vw" }}
+            >
+                <Offcanvas.Header closeButton closeVariant="white">
+                    <Offcanvas.Title>Delegate Details</Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body className="text-center">
+                    {selectedDelegate && (
+                        <>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    alignItems: "start",
+                                    justifyContent: "left",
+                                    gap: "30px",
+                                    marginBottom: "15px",
+                                }}
+                            >
+                                <img
+                                    src={selectedDelegate.img}
+                                    alt={selectedDelegate.name}
+                                    style={{
+                                        width: "80px",
+                                        height: "80px",
+                                        borderRadius: "50%",
+                                        objectFit: "cover",
+                                    }}
+                                />
+                                <div>
+                                    <h4 style={{ marginBottom: "5px" }}>{selectedDelegate.name}</h4>
+                                    <p style={{ margin: "0", fontSize: "14px" }}>
+                                        <strong>LC:</strong> {selectedDelegate.lc}
+                                    </p>
+                                    <p style={{ margin: "0", fontSize: "14px" }}>
+                                        <strong>Entity:</strong> {selectedDelegate.entity}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p>
+                                <strong>Email:</strong> {selectedDelegate.email}
+                            </p>
+                            <p>
+                                <strong>Phone:</strong> {selectedDelegate.phone}
+                            </p>
+                            <Button variant="danger" href={`https://wa.me/${selectedDelegate.phone}`}>
+                                Contact
+                            </Button>
+                        </>
+                    )}
+                </Offcanvas.Body>
+            </Offcanvas>
         </section>
     );
 };

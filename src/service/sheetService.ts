@@ -3,7 +3,8 @@ const SHEET_ID = "11XbmhooLKQcETblBhGGhLlf-NJPaCiYyNOV-zY6oI6k";
 
 const columns: Record<string, number>= {
     'name': 2,
-    'phoneNumber': 5,
+    'email': 5,
+    'phoneNumber': 6,
     'position': 11,
     'entity': 10,
     'lc': 13,

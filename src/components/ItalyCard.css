@@ -37,9 +37,18 @@
     opacity: 1;
 }
 
+.italy-card-footer {
+    bottom: 0;
+    width: 100%;
+    background: white;
+    color: black;
+    text-align: left;
+    padding: 10px;
+}
+
 /* Text Styling */
 .italy-card-name {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     margin-bottom: 3px;
     color: #333;
