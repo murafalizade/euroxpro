@@ -132,7 +132,8 @@ const DelegateScreen: FC = () => {
                             <div
                                 style={{
                                     display: "flex",
-                                    alignItems: "start",
+                                    flexDirection: "column",
+                                    alignItems: "center",
                                     justifyContent: "left",
                                     gap: "30px",
                                     marginBottom: "15px",
@@ -148,13 +149,10 @@ const DelegateScreen: FC = () => {
                                         objectFit: "cover",
                                     }}
                                 />
-                                <div>
                                     <h4 style={{ marginBottom: "5px" }}>{selectedDelegate.name}</h4>
                                     <p style={{ margin: "0", fontSize: "14px" }}>
                                         {selectedDelegate.lc} - AIESEC in {selectedDelegate.entity}
                                     </p>
-                                </div>
-                            </div>
 
                             <p>
                                 <strong>Email:</strong> {selectedDelegate.email}
@@ -165,6 +163,8 @@ const DelegateScreen: FC = () => {
                             <Button variant="danger" href={`https://wa.me/${selectedDelegate.phoneNumber}`}>
                                 Contact
                             </Button>
+                            </div>
+
                         </>
                     )}
                 </Offcanvas.Body>
@@ -187,7 +187,8 @@ const DelegateScreen: FC = () => {
                             <div
                                 style={{
                                     display: "flex",
-                                    alignItems: "start",
+                                    flexDirection: "column",
+                                    alignItems: "center",
                                     justifyContent: "left",
                                     gap: "30px",
                                     marginBottom: "15px",
@@ -203,14 +204,10 @@ const DelegateScreen: FC = () => {
                                         objectFit: "cover",
                                     }}
                                 />
-                                <div>
                                     <h4 style={{marginBottom: "5px"}}>{selectedDelegate.name}</h4>
                                     <p style={{margin: "0", fontSize: "14px"}}>
                                         {selectedDelegate.lc} - AIESEC in {selectedDelegate.entity}
                                     </p>
-                                </div>
-                            </div>
-
                             <p>
                                 <strong>Email:</strong> {selectedDelegate.email}
                             </p>
@@ -220,6 +217,7 @@ const DelegateScreen: FC = () => {
                             <Button variant="danger" href={`https://wa.me/${selectedDelegate.phoneNumber}`}>
                                 Contact
                             </Button>
+                            </div>
                         </>
                     )}
                 </Offcanvas.Body>
