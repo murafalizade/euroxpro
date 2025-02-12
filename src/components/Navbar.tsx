@@ -19,7 +19,7 @@ const CustomNavbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const areas = ['LCVP oGV', 'LCVP oGT', 'LCP', 'LCVP iGT', 'MCVP oGV', 'MCVP oGT', 'MCVP iGT', 'MCPc', 'MCPe', 'MCVP MKT', 'LCVP MKT']
+    const areas = ['LCVP oGV', 'LCVP oGT', 'LCP', 'LCVP iGT', 'MCVP oGV', 'MCVP oGT', 'MCVP iGT', 'MCP', 'MCPe', 'MCVP MKT', 'LCVP MKT']
 
     return (
         <Navbar expand="lg" fixed="top" className={`custom-navbar ${navbarBg}`}>

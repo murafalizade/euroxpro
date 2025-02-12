@@ -6,3 +6,21 @@ body{
 *{
     color: white;
 }
+
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row by default */
+    gap: 8px;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    }
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+}
