@@ -13,7 +13,7 @@ const DelegateScreen: FC = () => {
     const [countries, setCountries] = useState([])
 
     const { data = [] } = useQuery("ALL_DELEGATE_DATA", fetchAllSheetData, {
-        select: (data: unknown) => {
+        select: (data) => {
             if (position) {
                 data = data.filter((x) => x.position === position);
             }
@@ -26,7 +26,7 @@ const DelegateScreen: FC = () => {
 
     useEffect(() => {
         if(countries.length === 0){
-            setCountries(Array.from(new Set(data.map((x: unknown) => x.entity))))
+            setCountries(Array.from(new Set(data.map((x) => x.entity))))
         }
     }, [data]);
 
