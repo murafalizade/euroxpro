@@ -11,7 +11,7 @@ const DelegateScreen: FC = () => {
     const position = searchParams.get("position");
     const [selectedCountry, setSelectedCountry] = useState<string>("");
     const [countries, setCountries] = useState<string[]>([]);
-    const [selectedDelegate, setSelectedDelegate] = useState<DelegateCardProps | null>(null);
+    const [selectedDelegate, setSelectedDelegate] = useState<any | null>(null);
     const [showSidebar, setShowSidebar] = useState(false);
 
     const { data = [] } = useQuery("ALL_DELEGATE_DATA", fetchAllSheetData, {
