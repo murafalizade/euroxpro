@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Row, Col, Form, Badge, Offcanvas, Button } from "react-bootstrap";
 import DelegateCard, { DelegateCardProps } from "../../components/DelegateCard";
-import { fetchAllSheetData } from "../../service/sheetService.ts";
+import {fetchAllSheetData, getCloudinaryImageUrl} from "../../service/sheetService.ts";
 import { useQuery } from "react-query";
 import { useSearchParams } from "react-router-dom";
 
@@ -27,8 +27,9 @@ const DelegateScreen: FC = () => {
     });
 
     useEffect(() => {
+        const uniqueCountries = Array.from(new Set(data.map((x) => x.entity)));
         if (countries.length === 0) {
-            setCountries(Array.from(new Set(data.map((x) => x.entity))));
+            setCountries(uniqueCountries);
         }
     }, [data]);
 
@@ -139,7 +140,7 @@ const DelegateScreen: FC = () => {
                                 }}
                             >
                                 <img
-                                    src={selectedDelegate.img}
+                                    src={getCloudinaryImageUrl(selectedDelegate.img)}
                                     alt={selectedDelegate.name}
                                     style={{
                                         width: "140px",
@@ -194,7 +195,7 @@ const DelegateScreen: FC = () => {
                                 }}
                             >
                                 <img
-                                    src={selectedDelegate.img}
+                                    src={getCloudinaryImageUrl(selectedDelegate.img)}
                                     alt={selectedDelegate.name}
                                     style={{
                                         width: "140px",
