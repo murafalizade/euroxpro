@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
+import {areas} from "../service/constants.ts";
 
 const CustomNavbar = () => {
     const [navbarBg, setNavbarBg] = useState("navbar-transparent");
@@ -19,7 +20,6 @@ const CustomNavbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const areas = ['LCVP oGV', 'LCVP oGT', 'LCVP ICX', 'LCP', 'LCVP iGT', 'MCVP oGV', 'MCVP oGT', 'MCVP iGT', 'MCP', 'MCPe', 'MCVP Marketing', 'LCVP Marketing']
 
     return (
         <Navbar expand="lg" fixed="top" className={`custom-navbar ${navbarBg}`}>
@@ -33,7 +33,8 @@ const CustomNavbar = () => {
                         <Nav.Link href="/" className="mx-3">Home</Nav.Link>
                         <Nav.Link href="/merch" className="mx-3">Merch</Nav.Link>
                         <Nav.Link href="/" className="mx-3">Agenda</Nav.Link>
-                        <NavDropdown title="Delegates" id="delegates-dropdown" className="mx-3">
+                        <Nav.Link href="/delegate-positions" className="mx-3 d-block d-md-none">Delegates</Nav.Link>
+                        <NavDropdown title="Delegates" id="delegates-dropdown" className="mx-3 d-none d-md-block">
                             <NavDropdown.Item href={`/delegates`}>All</NavDropdown.Item>
                             {areas.map(x=> (
                                 <NavDropdown.Item key={x}  href={`/delegates?position=${x}`}>{x}</NavDropdown.Item>
