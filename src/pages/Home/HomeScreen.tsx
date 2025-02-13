@@ -82,7 +82,7 @@ const HomeScreen = () => {
                                 height: '64px',
                                 width: '35px',
                                 borderRadius: '1.5rem', // Equivalent to rounded-3xl
-                                border: '4px solid #ff6347', // Replace with your actual color
+                                border: '4px solid white', // Replace with your actual color
                                 padding: '0.5rem',
                             }}
                         >
@@ -96,7 +96,7 @@ const HomeScreen = () => {
                                     repeatType: "loop",
                                 }}
                                 style={{
-                                    backgroundColor: '#ff6347', // Replace with your actual color
+                                    backgroundColor: 'white', // Replace with your actual color
                                     marginBottom: '0.25rem',
                                     height: '0.75rem',
                                     width: '0.75rem',
