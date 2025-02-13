@@ -2,17 +2,17 @@ const API_KEY = "AIzaSyA_l7WTCB04HR7s208I7dNOCzQ8LoP6jXk";
 const SHEET_ID = "11XbmhooLKQcETblBhGGhLlf-NJPaCiYyNOV-zY6oI6k";
 
 const columns: Record<string, number>= {
-    'name': 2,
-    'email': 5,
-    'phoneNumber': 6,
-    'position': 11,
-    'entity': 10,
-    'lc': 13,
-    'img': 29
+    'name': 1,
+    'email': 2,
+    'phoneNumber': 3,
+    'position': 5,
+    'entity': 4,
+    'lc': 6,
+    'img': 7
 };
-
+// https://drive.google.com/drive/folders/1abYtHWocfsOTqofS7yp3aHZhHl7cr09O?usp=sharing
 export async function fetchSheetData() {
-    const range = "Sheet1!A120:AC130";
+    const range = "Sheet2!A120:AC130";
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`;
     const response = await fetch(url);
     const data = await response.json();
@@ -31,7 +31,7 @@ export async function fetchSheetData() {
 }
 
 export async function fetchAllSheetData() {
-    const range = "Sheet1!A2:AC";
+    const range = "Sheet2!A2:AC";
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`;
     const response = await fetch(url);
     const data = await response.json();
