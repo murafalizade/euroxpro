@@ -1,1 +1,1 @@
-export const areas = ['LCVP oGV', 'LCVP oGT', 'LCVP ICX', 'LCP', 'LCVP iGT', 'MCVP oGV', 'MCVP oGT', 'MCVP iGT', 'MCP', 'MCPe', 'MCVP Marketing', 'LCVP Marketing']
+export const areas = ['MCP', 'MCPe', 'MCVP oGV', 'MCVP oGT', 'MCVP iGT',  'MCVP Marketing','LCP', 'LCVP oGV', 'LCVP oGT', 'LCVP ICX',  'LCVP iGT',  'LCVP Marketing']

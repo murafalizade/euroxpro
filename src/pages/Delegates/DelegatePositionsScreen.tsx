@@ -24,6 +24,17 @@ export const  DelegatePositionsScreen: FC = () => {
                 </motion.h2>
 
                 <Row className="g-3 justify-content-center mb-5">
+                    <Col md={4}>
+                        <motion.a
+                            href={`/delegates`}
+                            className="resource-item text-decoration-none"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.4 }}
+                        >
+                            All
+                        </motion.a>
+                    </Col>
                     {areas.map((resource, index) => (
                         <Col key={index} md={4}>
                             <motion.a

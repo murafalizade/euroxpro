@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import {FC, useEffect, useRef, useState} from "react";
 import { motion } from "framer-motion";
 import { Row, Col, Form, Badge, Offcanvas, Button } from "react-bootstrap";
 import DelegateCard, { DelegateCardProps } from "../../components/DelegateCard";
@@ -26,12 +26,16 @@ const DelegateScreen: FC = () => {
         },
     });
 
+    const hasInitialized = useRef(false);
+
     useEffect(() => {
-        const uniqueCountries:string[] = Array.from(new Set(data.map((x) => x.entity)));
-        if (countries.length === 0) {
+        if (!hasInitialized.current && data.length > 0) {
+            const uniqueCountries: string[] = Array.from(new Set(data.map((x) => x.entity)));
             setCountries(uniqueCountries);
+            hasInitialized.current = true; // Mark as initialized
         }
-    }, [data]);
+    }, [data]); // Runs when data changes but only initializes once
+
 
     const handleSelectDelegate = (delegate: any) => {
         setSelectedDelegate(delegate);

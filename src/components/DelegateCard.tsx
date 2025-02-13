@@ -1,5 +1,5 @@
-import { FC } from "react";
-import {getCloudinaryImageUrl} from "../service/sheetService.ts";
+import {FC, useEffect, useState} from "react";
+import { getCloudinaryImageUrl } from "../service/sheetService.ts";
 
 // Props interface
 export interface DelegateCardProps {
@@ -10,6 +10,12 @@ export interface DelegateCardProps {
 }
 
 const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
+    const [imageSrc, setImageSrc] = useState(getCloudinaryImageUrl(img));
+
+    useEffect(() => {
+        setImageSrc(getCloudinaryImageUrl(img))
+    }, [img]);
+
     return (
         <div
             style={{
@@ -27,11 +33,14 @@ const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
                 cursor: "pointer",
             }}
         >
-
             {img && (
                 <img
-                    src={getCloudinaryImageUrl(img)}
+                    src={imageSrc}
                     alt={name}
+                    onError={() => {
+                        setImageSrc(img)
+                        console.log("error")
+                    }} // Fallback to the original img prop
                     style={{
                         width: "100%",
                         height: "180px",
