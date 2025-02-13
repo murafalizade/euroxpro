@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { useNavigate } from "react-router-dom"; // Import for redirection
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
+import {areas} from "../service/constants.ts";
 
 const CustomNavbar = () => {
     const [navbarBg, setNavbarBg] = useState("navbar-transparent");
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 992); // Track mobile state
-    const navigate = useNavigate(); // React Router redirection
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,29 +16,16 @@ const CustomNavbar = () => {
             }
         };
 
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 992); // Update state on resize
-        };
-
         window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleResize);
-        };
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const areas = [
-        'LCVP oGV', 'LCVP oGT', 'LCVP ICX', 'LCP', 'LCVP iGT',
-        'MCVP oGV', 'MCVP oGT', 'MCVP iGT', 'MCP', 'MCPe',
-        'MCVP Marketing', 'LCVP Marketing'
-    ];
 
     return (
         <Navbar expand="lg" fixed="top" className={`custom-navbar ${navbarBg}`}>
-            <Container fluid className="p-3 mx-4">
+            <Container fluid className={'p-3 mx-4'}>
                 <Navbar.Brand href="/">
-                    <img src="/euroxpro.png" alt="Brand Logo" height="50" />
+                    <img src="/euroxpro.png" alt="Brand Logo" height={'50'} />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -48,22 +33,17 @@ const CustomNavbar = () => {
                         <Nav.Link href="/" className="mx-3">Home</Nav.Link>
                         <Nav.Link href="/merch" className="mx-3">Merch</Nav.Link>
                         <Nav.Link href="/" className="mx-3">Agenda</Nav.Link>
-
-                        {isMobile ? (
-                            <Nav.Link href="/delegate-positions" className="mx-3">Delegates</Nav.Link>
-                        ) : (
-                            <NavDropdown title="Delegates" id="delegates-dropdown" className="mx-3">
-                                <NavDropdown.Item href="/delegates">All</NavDropdown.Item>
-                                {areas.map((x) => (
-                                    <NavDropdown.Item key={x} href={`/delegates?position=${x}`}>{x}</NavDropdown.Item>
-                                ))}
-                            </NavDropdown>
-                        )}
-
+                        <Nav.Link href="/delegate-positions" className="mx-3 d-block d-md-none">Delegates</Nav.Link>
+                        <NavDropdown title="Delegates" id="delegates-dropdown" className="mx-3 d-none d-md-block">
+                            <NavDropdown.Item href={`/delegates`}>All</NavDropdown.Item>
+                            {areas.map(x=> (
+                                <NavDropdown.Item key={x}  href={`/delegates?position=${x}`}>{x}</NavDropdown.Item>
+                            ))}
+                        </NavDropdown>
                         <Nav.Link href="/cc" className="mx-3">CC Team</Nav.Link>
                         <NavDropdown title="Help" id="help-dropdown" className="mx-3">
                             <NavDropdown.Item href="/resources">Resources</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Feedback</NavDropdown.Item>
+                            <NavDropdown.Item href="/feedback">Feedback</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
