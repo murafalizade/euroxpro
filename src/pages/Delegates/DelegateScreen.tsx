@@ -27,7 +27,7 @@ const DelegateScreen: FC = () => {
     });
 
     useEffect(() => {
-        const uniqueCountries = Array.from(new Set(data.map((x) => x.entity)));
+        const uniqueCountries:string[] = Array.from(new Set(data.map((x) => x.entity)));
         if (countries.length === 0) {
             setCountries(uniqueCountries);
         }
