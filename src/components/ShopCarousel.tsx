@@ -41,7 +41,7 @@ const items = [
     },
     {
         name: "EuroXpro'25 Lighter",
-        price: "€10.00",
+        price: "€2.50",
         img: "lighter.png",
     },
 ];
