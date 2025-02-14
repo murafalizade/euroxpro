@@ -39,7 +39,6 @@ const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
                     alt={name}
                     onError={() => {
                         setImageSrc(img)
-                        console.log("error")
                     }}
                     style={{
                         width: "100%",
