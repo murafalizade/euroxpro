@@ -10,10 +10,10 @@ export interface DelegateCardProps {
 }
 
 const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
-    const [imageSrc, setImageSrc] = useState(getCloudinaryImageUrl(img));
+    const [imageSrc, setImageSrc] = useState(getCloudinaryImageUrl(name));
 
     useEffect(() => {
-        setImageSrc(getCloudinaryImageUrl(img))
+        setImageSrc(getCloudinaryImageUrl(name))
     }, [img]);
 
     return (

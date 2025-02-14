@@ -25,7 +25,7 @@ const DelegateScreen: FC = () => {
 
     useEffect(() => {
         if (selectedDelegate) {
-            const cloudinaryUrl = getCloudinaryImageUrl(selectedDelegate.img);
+            const cloudinaryUrl = getCloudinaryImageUrl(selectedDelegate.name);
             setImageSrc(cloudinaryUrl || selectedDelegate.img);
         }
     }, [selectedDelegate]);
@@ -38,7 +38,6 @@ const DelegateScreen: FC = () => {
         setSelectedDelegate(delegate);
         setShowSidebar(true);
     };
-
     return (
         <main style={{ marginTop: "180px", width: "100vw", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "20px" }}>
             <motion.h1 style={{ fontSize: "36px", marginBottom: "20px", fontWeight: "bold", textAlign: "center" }} initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
