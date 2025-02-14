@@ -40,7 +40,7 @@ const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
                     onError={() => {
                         setImageSrc(img)
                         console.log("error")
-                    }} // Fallback to the original img prop
+                    }}
                     style={{
                         width: "100%",
                         height: "180px",
