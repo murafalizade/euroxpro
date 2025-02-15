@@ -26,6 +26,7 @@ const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
                 borderRadius: "12px",
                 padding: "20px",
                 width: "250px",
+                maxWidth:"250px",
                 height: "300px",
                 background: "#fff",
                 boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",

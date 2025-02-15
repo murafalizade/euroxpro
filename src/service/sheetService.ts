@@ -34,8 +34,6 @@ export async function fetchAllSheetData() {
 const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dorcbhjzc/image/upload/";
 
 export const getCloudinaryImageUrl = (img: string): string => {
-    // const fileNameWithExtension = img.substring(img.lastIndexOf("/") + 1);
-    // const fileNameWithoutExtension = fileNameWithExtension.split(".")[0];
     const fileNameWithoutExtension = img.toLowerCase().replace(/ /g, "_")
     return `${CLOUDINARY_BASE_URL}${fileNameWithoutExtension}.webp`;
 };
