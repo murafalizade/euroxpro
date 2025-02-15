@@ -42,7 +42,7 @@ const HomeScreen = () => {
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.8, delay: 0.3}}
                         >
-                            19-25 March, Italy, Rimini Hotel
+                            19-23 March, Italy, Rimini Hotel
                         </motion.p>
 
                         <motion.div
