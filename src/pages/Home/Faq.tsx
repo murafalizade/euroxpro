@@ -19,7 +19,7 @@ export const Faq = () => {
             <Container style={{ maxWidth: "800px" }}>
                 <h1 className="text-center mb-4" style={{ color: "#fff", fontSize: '36px' }}>Frequently Asked Questions</h1>
                 <Accordion defaultActiveKey="0">
-                    {data.map((faq, index) => (
+                    {data.map((faq:any, index) => (
                         <Accordion.Item eventKey={index.toString()} key={index}>
                             <Accordion.Header>{faq.question}</Accordion.Header>
                             <Accordion.Body style={{ color: "black", fontWeight: 'bold' }}>
