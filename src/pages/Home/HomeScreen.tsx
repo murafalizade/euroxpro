@@ -2,6 +2,7 @@ import {motion} from "framer-motion";
 import Typewriter from "typewriter-effect";
 import "./HomeScreen.css";
 import ItalyExploreScreen from "./ItalyExploreScreen.tsx";
+import {Faq} from "./Faq.tsx";
 
 const HomeScreen = () => {
     return (
@@ -51,10 +52,13 @@ const HomeScreen = () => {
                             animate={{opacity: 1, scale: 1}}
                             transition={{duration: 0.6, delay: 0.5}}
                         >
-                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/REuroXpro25'} className="btn btn-danger">Register
+                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/REuroXpro25'}
+                               className="btn btn-danger">Register
                                 Now</a>
-                            <a target={'_blank'} href={'https://maps.app.goo.gl/bSoxj6m21DaHheSK8'} className="btn btn-danger">Get Location</a>
-                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/ShopEuroXpro25'} className="btn btn-danger">AIESEC
+                            <a target={'_blank'} href={'https://maps.app.goo.gl/bSoxj6m21DaHheSK8'}
+                               className="btn btn-danger">Get Location</a>
+                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/ShopEuroXpro25'}
+                               className="btn btn-danger">AIESEC
                                 Shop</a>
                         </motion.div>
 
@@ -119,6 +123,18 @@ const HomeScreen = () => {
                 }}
             >
                 <ItalyExploreScreen/>
+            </motion.div>
+
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true, amount: 0.2}}
+                variants={{
+                    hidden: {opacity: 0, y: 50},
+                    visible: {opacity: 1, y: 0, transition: {duration: 0.8}}
+                }}
+            >
+                <Faq/>
             </motion.div>
         </main>
     );
