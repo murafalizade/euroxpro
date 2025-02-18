@@ -3,6 +3,8 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
 import {areas} from "../service/constants.ts";
+import { Analytics } from "@vercel/analytics/react"
+
 
 const CustomNavbar = () => {
     const [navbarBg, setNavbarBg] = useState("navbar-transparent");
@@ -48,6 +50,7 @@ const CustomNavbar = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
+            <Analytics />
         </Navbar>
     );
 };
