@@ -31,7 +31,7 @@ const ResourceScreen: FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     style={{
-                        marginTop: "225px"
+                        marginTop: "250px"
                     }}
                 >
                     Conference Resources
