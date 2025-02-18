@@ -38,7 +38,7 @@ const ResourceScreen: FC = () => {
                     Conference Resources
                 </motion.h2>
 
-                <Row className="g-3 justify-content-center">
+                <Row className="g-3 justify-content-center mb-4">
                     {resources.map((resource, index) => (
                         <Col key={index} xs={12} sm={6} md={4}>
                             <a
