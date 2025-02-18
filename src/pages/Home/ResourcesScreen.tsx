@@ -22,7 +22,8 @@ const ResourceScreen: FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="vh-100 vw-100 d-flex align-items-center justify-content-center text-center"
+            className="vw-100 d-flex align-items-center justify-content-center text-center"
+            style={{minHeight: '100vh'}}
         >
             <Container>
                 <motion.h2
@@ -31,7 +32,7 @@ const ResourceScreen: FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     style={{
-                        marginTop: "250px"
+                        marginTop: "280px"
                     }}
                 >
                     Conference Resources

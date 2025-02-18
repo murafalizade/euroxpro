@@ -1,8 +1,7 @@
-import {FC} from "react";
+import { FC } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Feedback: FC = () => {
-
     return (
         <main
             style={{
@@ -16,22 +15,25 @@ const Feedback: FC = () => {
                 padding: "20px",
             }}
         >
-        <Container fluid className="p-5">
-            <Row className="align-items-center">
-                <Col xs={12} md={6} className="p-2">
-                    <h2 className="mb-4">Feedback</h2>
-                    <div>
-                        <a href={'/'} className={'btn btn-danger m-4'}>Day 1</a>
-                        <a href={'/'} className={'btn btn-danger m-4'}>Day 2</a>
-                        <a href={'/'} className={'btn btn-danger m-4'}>Day 3</a>
-                        <a href={'/'} className={'btn btn-danger m-4'}>Day 4</a>
-                    </div>
-                </Col>
-                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
-                    <img src="./europe.png" alt="Europe" className="img-fluid" style={{ maxWidth: "80%", width: '450px'}} />
-                </Col>
-            </Row>
-        </Container>
+            <Container fluid className="p-5 text-center">
+                {/* Centered Title */}
+                <h2 className="mb-4">Feedback</h2>
+
+                <Row className="justify-content-center">
+                    {/* Buttons Column */}
+                    <Col xs={12} md={6} className="d-flex flex-column align-items-center mb-4">
+                        <a href="/" className="btn btn-danger my-2 w-75">Day 1</a>
+                        <a href="/" className="btn btn-danger my-2 w-75">Day 2</a>
+                        <a href="/" className="btn btn-danger my-2 w-75">Day 3</a>
+                        <a href="/" className="btn btn-danger my-2 w-75">Day 4</a>
+                    </Col>
+
+                    {/* Image Column */}
+                    <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
+                        <img src="./europe.png" alt="Europe" className="img-fluid" style={{ maxWidth: "80%", width: "450px" }} />
+                    </Col>
+                </Row>
+            </Container>
         </main>
     );
 };

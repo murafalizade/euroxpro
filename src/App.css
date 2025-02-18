@@ -60,3 +60,7 @@ body{
     outline: none !important;
     border-color: transparent !important;
 }
+
+.accordion-button:not(.collapsed)::after {
+    filter: invert(1);
+}
