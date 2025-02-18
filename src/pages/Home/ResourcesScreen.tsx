@@ -5,9 +5,9 @@ import "./Resources.css";
 
 const resources = [
     { name: "DELEGATE SUPPORT FORM", link: "https://aiesecitaly.typeform.com/to/YO7QDSsX" },
-    { name: "FAQ", link: "#" },
+    { name: "FAQ", link: "/#faq" },
     { name: "TRANSPORTATION FORM", link: "#" },
-    { name: "SHOP REGISTRATION", link: "https://aiesecitaly.typeform.com/ShopEuroXpro25" },
+    { name: "ORDER YOUR MERCH NOW!", link: "https://aiesecitaly.typeform.com/ShopEuroXpro25" },
     { name: "REGISTER NOW!", link: "https://aiesecitaly.typeform.com/REuroXpro25" },
     { name: "AGENDA", link: "#" },
     { name: "INVITATION LETTER FORM", link: "https://aiesecitaly.typeform.com/ILEuroXpro25" },
@@ -30,6 +30,9 @@ const ResourceScreen: FC = () => {
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
+                    style={{
+                        marginTop: "225px"
+                    }}
                 >
                     Conference Resources
                 </motion.h2>
@@ -37,15 +40,13 @@ const ResourceScreen: FC = () => {
                 <Row className="g-3 justify-content-center">
                     {resources.map((resource, index) => (
                         <Col key={index} xs={12} sm={6} md={4}>
-                            <motion.a
+                            <a
                                 href={resource.link}
+                                target={'_blank'}
                                 className="resource-item text-decoration-none"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.4, delay: index * 0.1 }}
                             >
                                 {resource.name}
-                            </motion.a>
+                            </a>
                         </Col>
                     ))}
                 </Row>

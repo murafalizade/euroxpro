@@ -22,7 +22,7 @@ export const Faq = () => {
                     {data.map((faq:any, index) => (
                         <Accordion.Item eventKey={index.toString()} key={index}>
                             <Accordion.Header>{faq.question}</Accordion.Header>
-                            <Accordion.Body style={{ color: "black", fontWeight: 'bold' }}>
+                            <Accordion.Body style={{ color: "black" }}>
                                 {faq.answer}
                             </Accordion.Body>
                         </Accordion.Item>

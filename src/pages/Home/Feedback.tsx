@@ -21,9 +21,9 @@ const Feedback: FC = () => {
                 <Col xs={12} md={6} className="p-2">
                     <h2 className="mb-4">Feedback</h2>
                     <div>
-                        <a href={'/'} className={'btn btn-danger ms-0 m-4'}>Day 1</a>
+                        <a href={'/'} className={'btn btn-danger m-4'}>Day 1</a>
                         <a href={'/'} className={'btn btn-danger m-4'}>Day 2</a>
-                        <a href={'/'} className={'btn btn-danger ms-0 m-4'}>Day 3</a>
+                        <a href={'/'} className={'btn btn-danger m-4'}>Day 3</a>
                         <a href={'/'} className={'btn btn-danger m-4'}>Day 4</a>
                     </div>
                 </Col>

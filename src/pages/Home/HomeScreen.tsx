@@ -28,7 +28,7 @@ const HomeScreen = () => {
                                     loop: true
                                 }}
                                 onInit={(typewriter) => {
-                                    typewriter.typeString("EuroXPro 2025")
+                                    typewriter.typeString("EuroXpro 2025")
                                         .pauseFor(500)
                                         .deleteAll()
                                         .typeString("United for Exchange")
@@ -125,8 +125,9 @@ const HomeScreen = () => {
                 <ItalyExploreScreen/>
             </motion.div>
 
-            <motion.div
+            <motion.section
                 initial="hidden"
+                id={'faq'}
                 whileInView="visible"
                 viewport={{once: true, amount: 0.2}}
                 variants={{
@@ -135,7 +136,7 @@ const HomeScreen = () => {
                 }}
             >
                 <Faq/>
-            </motion.div>
+            </motion.section>
         </main>
     );
 };

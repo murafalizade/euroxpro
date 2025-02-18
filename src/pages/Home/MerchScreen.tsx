@@ -15,17 +15,17 @@ const MerchSection = () => {
             }}
         >
             <h1 style={{ fontSize: "36px", marginBottom: "20px", fontWeight: "bold" }}>
-                EuroXPro'25 Merch
+                EuroXpro'25 Merch
             </h1>
 
             <ShopCarousel />
             <a
+                className={'btn btn-danger'}
                 href="https://aiesecitaly.typeform.com/ShopEuroXpro25"
+                target={'_blank'}
                 style={{
                     marginTop: "20px",
                     padding: "12px 20px",
-                    backgroundColor: "#005402",
-                    color: "white",
                     borderRadius: "8px",
                     textDecoration: "none",
                     fontSize: "16px",
