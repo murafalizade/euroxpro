@@ -15,17 +15,17 @@ const Feedback: FC = () => {
                 padding: "20px",
             }}
         >
-            <Container fluid className="p-5 text-center">
+            <Container fluid className="text-center">
                 {/* Centered Title */}
                 <h2 className="mb-4">Feedback</h2>
 
                 <Row className="justify-content-center">
                     {/* Buttons Column */}
                     <Col xs={12} md={6} className="d-flex flex-column align-items-center mb-4">
-                        <a href="/" className="btn btn-danger my-2 w-75">Day 1</a>
-                        <a href="/" className="btn btn-danger my-2 w-75">Day 2</a>
-                        <a href="/" className="btn btn-danger my-2 w-75">Day 3</a>
-                        <a href="/" className="btn btn-danger my-2 w-75">Day 4</a>
+                        <a href="/" className="btn btn-danger my-2 w-100">Day 1</a>
+                        <a href="/" className="btn btn-danger my-2 w-100">Day 2</a>
+                        <a href="/" className="btn btn-danger my-2 w-100">Day 3</a>
+                        <a href="/" className="btn btn-danger my-2 w-100">Day 4</a>
                     </Col>
 
                     {/* Image Column */}
