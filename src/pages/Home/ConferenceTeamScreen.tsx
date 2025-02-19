@@ -33,19 +33,19 @@ const ConferenceTeamScreen: FC = () => {
             <Row className="justify-content-center">
                 <h3 className={'text-center my-5'}>Core Team</h3>
                 <Col md={2} sm={6} className="d-flex justify-content-center mb-4">
-                    <DelegateCard img={'/11.png'} name={'Mohmmed Algelany'} lc={'Conference Manager'} position={'-'}/>
+                    <DelegateCard img={'/11.png'} name={'Mohmmed Algelany'} lc={'Europe OD Manager'} position={'-'}/>
                 </Col>
                 <Col md={2} sm={6} className="d-flex justify-content-center mb-4">
                     <DelegateCard img={'/13.png'} name={'Omar Ibrahim'} lc={'Conference Manager'} position={'+90 531 812 43 39'}/>
                 </Col>
                 <Col md={2} sm={6} className="d-flex justify-content-center mb-4">
-                    <DelegateCard img={'/14.png'} name={'Eleonara Pezzi'} lc={'Conference Manager'} position={'eleonora.pezzi@aiesec.it'}/>
+                    <DelegateCard img={'/14.png'} name={'Eleonara Pezzi'} lc={'Agenda Manager'} position={'eleonora.pezzi@aiesec.it'}/>
                 </Col>
                 <Col md={2} sm={6} className="d-flex justify-content-center mb-4">
-                    <DelegateCard img={'/15.png'} name={'Sertaç Gülbudak'} lc={'Conference Manager'} position={'-'}/>
+                    <DelegateCard img={'/15.png'} name={'Sertaç Gülbudak'} lc={'Agenda Manager'} position={'-'}/>
                 </Col>
                 <Col md={2} sm={6} className="d-flex justify-content-center mb-4">
-                    <DelegateCard img={'/12.png'} name={'Ahmed Ellithy'} lc={'Conference Manager'} position={'ahmed.ellithy@aiesec.it'}/>
+                    <DelegateCard img={'/12.png'} name={'Ahmed Ellithy'} lc={'MCP of AIESEC in Italy'} position={'ahmed.ellithy@aiesec.it'}/>
                 </Col>
             </Row>
 
