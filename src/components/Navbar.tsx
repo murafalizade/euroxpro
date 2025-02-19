@@ -35,7 +35,7 @@ const CustomNavbar = () => {
                         <Nav.Link href="/" className="mx-3">Home</Nav.Link>
                         <Nav.Link href="/merch" className="mx-3">Merch</Nav.Link>
                         <Nav.Link href="/" className="mx-3">Agenda</Nav.Link>
-                        <Nav.Link href="/delegate-positions" className="mx-3 d-block d-md-none">Delegates</Nav.Link>
+                        <Nav.Link href="/delegate-positions" className="mx-3">Delegates</Nav.Link>
                         {/*<NavDropdown title="Delegates" id="delegates-dropdown" className="mx-3 d-none d-md-block">*/}
                         {/*    <NavDropdown.Item href={`/delegates`}>All</NavDropdown.Item>*/}
                         {/*    {areas.map(x=> (*/}
