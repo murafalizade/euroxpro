@@ -44,6 +44,11 @@ const items = [
         price: "€2.50",
         img: "lighter.png",
     },
+    {
+        name: "AIESEC Bottle Opener",
+        price: "€4.00",
+        img: "bottleOpener.png",
+    },
 ];
 
 const ShopCarousel = () => {
