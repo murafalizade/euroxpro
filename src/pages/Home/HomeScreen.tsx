@@ -55,11 +55,10 @@ const HomeScreen = () => {
                             <a target={'_blank'} href={'https://aiesecitaly.typeform.com/REuroXpro25'}
                                className="btn btn-danger">Register
                                 Now</a>
+                            <a target={'_blank'} href={'https://t.me/addlist/TMSQLPMYsKViMzQ8'}
+                               className="btn btn-danger">Join Telegram</a>
                             <a target={'_blank'} href={'https://maps.app.goo.gl/bSoxj6m21DaHheSK8'}
                                className="btn btn-danger">Get Location</a>
-                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/ShopEuroXpro25'}
-                               className="btn btn-danger">AIESEC
-                                Shop</a>
                         </motion.div>
 
                     </motion.div>

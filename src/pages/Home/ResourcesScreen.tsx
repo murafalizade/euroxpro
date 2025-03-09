@@ -6,8 +6,8 @@ import "./Resources.css";
 const resources = [
     { name: "DELEGATE SUPPORT FORM", link: "https://aiesecitaly.typeform.com/to/YO7QDSsX" },
     { name: "FAQ", link: "/#faq" },
-    { name: "TRANSPORTATION FORM", link: "#" },
-    { name: "ORDER YOUR MERCH NOW!", link: "https://aiesecitaly.typeform.com/ShopEuroXpro25" },
+    { name: "TRANSPORTATION FORM", link: "https://aiesecitaly.typeform.com/to/xXIzPXfI" },
+    { name: "TELEGRAM GROUP", link: "https://t.me/addlist/TMSQLPMYsKViMzQ8" },
     { name: "REGISTER NOW!", link: "https://aiesecitaly.typeform.com/REuroXpro25" },
     { name: "AGENDA", link: "#" },
     { name: "INVITATION LETTER FORM", link: "https://aiesecitaly.typeform.com/ILEuroXpro25" },
