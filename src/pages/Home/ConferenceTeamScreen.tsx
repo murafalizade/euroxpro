@@ -42,7 +42,7 @@ const ConferenceTeamScreen: FC = () => {
                     <DelegateCard img={'/14.png'} name={'Eleonara Pezzi'} lc={'Agenda Manager'} position={'eleonora.pezzi@aiesec.it'}/>
                 </Col>
                 <Col md={2} sm={6} className="d-flex justify-content-center mb-4">
-                    <DelegateCard img={'/15.png'} name={'Sertaç Gülbudak'} lc={'Agenda Manager'} position={'-'}/>
+                    <DelegateCard img={'/isi.png'} name={'Isidora Lazovic'} lc={'Agenda Manager'} position={'+381 64 4559501'}/>
                 </Col>
                 <Col md={2} sm={6} className="d-flex justify-content-center mb-4">
                     <DelegateCard img={'/12.png'} name={'Ahmed Ellithy'} lc={'MCP of AIESEC in Italy'} position={'ahmed.ellithy@aiesec.it'}/>
