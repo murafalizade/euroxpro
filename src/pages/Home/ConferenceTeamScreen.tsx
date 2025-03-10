@@ -33,7 +33,7 @@ const ConferenceTeamScreen: FC = () => {
             <Row className="justify-content-center">
                 <h3 className={'text-center my-5'}>Core Team</h3>
                 <Col md={2} sm={6} className="d-flex justify-content-center mb-4">
-                    <DelegateCard img={'/11.png'} name={'Mohmmed Algelany'} lc={'Europe OD Manager'} position={'-'}/>
+                    <DelegateCard img={'/11.png'} name={'Mohammed Algelany'} lc={'Europe OD Manager'} position={'-'}/>
                 </Col>
                 <Col md={2} sm={6} className="d-flex justify-content-center mb-4">
                     <DelegateCard img={'/13.png'} name={'Omar Ibrahim'} lc={'Conference Manager'} position={'+90 531 812 43 39'}/>
