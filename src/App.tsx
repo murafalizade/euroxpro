@@ -10,6 +10,7 @@ import ResourceScreen from "./pages/Home/ResourcesScreen.tsx";
 import Footer from "./components/Footer.tsx";
 import Feedback from "./pages/Home/Feedback.tsx";
 import {DelegatePositionsScreen} from "./pages/Delegates/DelegatePositionsScreen.tsx";
+import {ChallengesScreen} from "./pages/Challenges/ChallengesScreen.tsx";
 
 function App() {
     const queryClient = new QueryClient({
@@ -33,6 +34,7 @@ function App() {
                     <Route path={"/resources"} element={<ResourceScreen />} />
                     <Route path="/delegates" element={<DelegateScreen />} />
                     <Route path="/feedback" element={<Feedback />} />
+                    <Route path="/challenges" element={<ChallengesScreen />} />
                     <Route path={'/delegate-positions'} element={<DelegatePositionsScreen />} />
                 </Routes>
                 <Footer/>
