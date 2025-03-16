@@ -4,15 +4,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./Resources.css";
 
 const resources = [
-    { name: "DELEGATE SUPPORT FORM", link: "https://aiesecitaly.typeform.com/to/YO7QDSsX" },
+    { name: "PICTURES", link: "https://drive.google.com/drive/folders/1ZXL8dSbFaweg3v8QLZEDSoSp1_4nWpA3?usp=sharing" },
     { name: "FAQ", link: "/#faq" },
     { name: "TRANSPORTATION FORM", link: "https://aiesecitaly.typeform.com/to/xXIzPXfI" },
     { name: "TELEGRAM GROUP", link: "https://t.me/addlist/TMSQLPMYsKViMzQ8" },
     { name: "REGISTER NOW!", link: "https://aiesecitaly.typeform.com/REuroXpro25" },
     { name: "AGENDA", link: "https://www.aies.ec/euroxpro-italy-2025-live-agenda" },
-    { name: "INVITATION LETTER FORM", link: "https://aiesecitaly.typeform.com/ILEuroXpro25" },
+    { name: "ROLL CALL PLAYLIST", link: "https://youtube.com/playlist?list=PL8TfCMoCYFHHMoIdlwj_yWN3SJrLPVumC&si=rU6CHcNiHwENyAzs" },
     { name: "BOOKLET", link: "https://drive.google.com/drive/u/1/folders/1a4XftlYlxY06dYLEQmFLk4OU1jSZolPJ?fbclid=PAZXh0bgNhZW0CMTEAAabk_mbG8Q9jEq7fOgMlU9m8EG7t6NK11UKPgxbboCqvg8uetr_BflERODc_aem_YnII5R1stvP-o1r0Q153wA" },
     { name: "DELEGATE DOCUMENTS", link: "https://aiesecitaly.typeform.com/to/e8sZWYDd" },
+    { name: "DELEGATE SUPPORT FORM", link: "https://aiesecitaly.typeform.com/to/YO7QDSsX" },
 ];
 
 const ResourceScreen: FC = () => {
