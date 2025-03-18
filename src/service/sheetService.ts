@@ -8,7 +8,8 @@ const columns: Record<string, number>= {
     'position': 5,
     'entity': 4,
     'lc': 6,
-    'img': 7
+    'img': 7,
+    "existed": 8
 };
 
 const faqColumns: Record<string, number>= {

@@ -19,7 +19,7 @@ const DelegateScreen: FC = () => {
         select: (data: any) => {
             if (position) data = data.filter((x) => x.position === position);
             if (selectedCountry) data = data.filter((x) => x.entity === selectedCountry);
-            return data;
+            return data?.filter((x: any)=> x.existed === 'Yes');
         },
     });
 
