@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import './App.css';
 import DelegateScreen from "./pages/Delegates/DelegateScreen.tsx";
 import ConferenceTeamScreen from "./pages/Home/ConferenceTeamScreen.tsx";
-import MerchScreen from "./pages/Home/MerchScreen.tsx";
 import ResourceScreen from "./pages/Home/ResourcesScreen.tsx";
 import Footer from "./components/Footer.tsx";
 import Feedback from "./pages/Home/Feedback.tsx";
@@ -30,7 +29,6 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomeScreen />} />
                     <Route path={"/cc"} element={<ConferenceTeamScreen />} />
-                    <Route path={"/merch"} element={<MerchScreen />} />
                     <Route path={"/resources"} element={<ResourceScreen />} />
                     <Route path="/delegates" element={<DelegateScreen />} />
                     <Route path="/feedback" element={<Feedback />} />
