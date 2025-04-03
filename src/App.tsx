@@ -3,13 +3,9 @@ import CustomNavbar from "./components/Navbar";
 import HomeScreen from "./pages/Home/HomeScreen";
 import { QueryClient, QueryClientProvider } from "react-query";
 import './App.css';
-import DelegateScreen from "./pages/Delegates/DelegateScreen.tsx";
-import ConferenceTeamScreen from "./pages/Home/ConferenceTeamScreen.tsx";
 import ResourceScreen from "./pages/Home/ResourcesScreen.tsx";
 import Footer from "./components/Footer.tsx";
 import Feedback from "./pages/Home/Feedback.tsx";
-import {DelegatePositionsScreen} from "./pages/Delegates/DelegatePositionsScreen.tsx";
-import {ChallengesScreen} from "./pages/Challenges/ChallengesScreen.tsx";
 
 function App() {
     const queryClient = new QueryClient({
