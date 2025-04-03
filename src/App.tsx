@@ -28,12 +28,12 @@ function App() {
                 <CustomNavbar />
                 <Routes>
                     <Route path="/" element={<HomeScreen />} />
-                    <Route path={"/cc"} element={<ConferenceTeamScreen />} />
+                    {/*<Route path={"/cc"} element={<ConferenceTeamScreen />} />*/}
                     <Route path={"/resources"} element={<ResourceScreen />} />
-                    <Route path="/delegates" element={<DelegateScreen />} />
+                    {/*<Route path="/delegates" element={<DelegateScreen />} />*/}
                     <Route path="/feedback" element={<Feedback />} />
-                    <Route path="/challenges" element={<ChallengesScreen />} />
-                    <Route path={'/delegate-positions'} element={<DelegatePositionsScreen />} />
+                    {/*<Route path="/challenges" element={<ChallengesScreen />} />*/}
+                    {/*<Route path={'/delegate-positions'} element={<DelegatePositionsScreen />} />*/}
                 </Routes>
                 <Footer/>
             </Router>
