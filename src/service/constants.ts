@@ -1,1 +1,9 @@
-export const areas = ['LCVP oGV', 'LCVP oGT', 'LCVP ICX', 'LCP', 'LCVP iGT', 'MCVP oGV', 'MCVP oGT', 'MCVP iGT', 'MCP', 'MCPe', 'MCVP Marketing', 'LCVP Marketing']
+export const areas = ['MCP', 'MCPe','MCVP oGX', 'MCVP oGV', 'MCVP oGT', 'MCVP iCX', 'MCVP iGT', 'MCVP Proxy', 'MCVP Marketing','LCP', 'LCVP oGX', 'LCVP oGV', 'LCVP oGT', 'LCVP iGV', 'LCVP iCX',  'LCVP iGT','LCVP Proxy',  'LCVP Marketing']
+export const entities = [
+    "ARMENIA", "AUSTRIA", "AZERBAIJAN", "BELGIUM", "BOSNIA AND HERZEGOVINA",
+    "BULGARIA", "CROATIA", "CZECH REPUBLIC", "DENMARK", "EGYPT", "ESTONIA",
+    "FRANCE", "GEORGIA", "GERMANY", "GREECE", "HUNGARY", "ITALY", "KAZAKHSTAN",
+    "KYRGYZSTAN", "MAINLAND OF CHINA", "MOLDOVA", "NEW ZEALAND", "POLAND",
+    "PORTUGAL", "ROMANIA", "RUSSIA", "SERBIA", "SLOVAKIA", "SPAIN", "SWITZERLAND",
+    "THE NETHERLANDS", "TUNISIA", "TURKIYE", "UKRAINE", "UNITED KINGDOM"
+];

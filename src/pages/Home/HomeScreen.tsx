@@ -2,6 +2,7 @@ import {motion} from "framer-motion";
 import Typewriter from "typewriter-effect";
 import "./HomeScreen.css";
 import ItalyExploreScreen from "./ItalyExploreScreen.tsx";
+import {Faq} from "./Faq.tsx";
 
 const HomeScreen = () => {
     return (
@@ -27,7 +28,7 @@ const HomeScreen = () => {
                                     loop: true
                                 }}
                                 onInit={(typewriter) => {
-                                    typewriter.typeString("EuroXPro 2025")
+                                    typewriter.typeString("EuroXpro 2025")
                                         .pauseFor(500)
                                         .deleteAll()
                                         .typeString("United for Exchange")
@@ -42,7 +43,7 @@ const HomeScreen = () => {
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.8, delay: 0.3}}
                         >
-                            19-25 March, Italy, Rimini Hotel
+                            19-23 March, Italy, Rimini Hotel
                         </motion.p>
 
                         <motion.div
@@ -51,11 +52,13 @@ const HomeScreen = () => {
                             animate={{opacity: 1, scale: 1}}
                             transition={{duration: 0.6, delay: 0.5}}
                         >
-                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/REuroXpro25'} className="btn btn-danger">Register
+                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/REuroXpro25'}
+                               className="btn btn-danger">Register
                                 Now</a>
-                            <a target={'_blank'} href={'https://maps.app.goo.gl/bSoxj6m21DaHheSK8'} className="btn btn-danger">Get Location</a>
-                            <a target={'_blank'} href={'https://aiesecitaly.typeform.com/ShopEuroXpro25'} className="btn btn-danger">AIESEC
-                                Shop</a>
+                            <a target={'_blank'} href={'https://t.me/addlist/TMSQLPMYsKViMzQ8'}
+                               className="btn btn-danger">Join Telegram</a>
+                            <a target={'_blank'} href={'https://maps.app.goo.gl/bSoxj6m21DaHheSK8'}
+                               className="btn btn-danger">Get Location</a>
                         </motion.div>
 
                     </motion.div>
@@ -82,7 +85,7 @@ const HomeScreen = () => {
                                 height: '64px',
                                 width: '35px',
                                 borderRadius: '1.5rem', // Equivalent to rounded-3xl
-                                border: '4px solid #ff6347', // Replace with your actual color
+                                border: '4px solid white', // Replace with your actual color
                                 padding: '0.5rem',
                             }}
                         >
@@ -96,7 +99,7 @@ const HomeScreen = () => {
                                     repeatType: "loop",
                                 }}
                                 style={{
-                                    backgroundColor: '#ff6347', // Replace with your actual color
+                                    backgroundColor: 'white', // Replace with your actual color
                                     marginBottom: '0.25rem',
                                     height: '0.75rem',
                                     width: '0.75rem',
@@ -120,6 +123,19 @@ const HomeScreen = () => {
             >
                 <ItalyExploreScreen/>
             </motion.div>
+
+            <motion.section
+                initial="hidden"
+                id={'faq'}
+                whileInView="visible"
+                viewport={{once: true, amount: 0.2}}
+                variants={{
+                    hidden: {opacity: 0, y: 50},
+                    visible: {opacity: 1, y: 0, transition: {duration: 0.8}}
+                }}
+            >
+                <Faq/>
+            </motion.section>
         </main>
     );
 };

@@ -49,3 +49,18 @@ body{
 .position-button:hover {
     background-color: #333;
 }
+
+.accordion-button:not(.collapsed) {
+    background-color: black !important;  /* White background */
+    color: white !important;          /* Dark red text color */
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: transparent !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: invert(1);
+}

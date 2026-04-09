@@ -8,32 +8,20 @@ const columns: Record<string, number>= {
     'position': 5,
     'entity': 4,
     'lc': 6,
-    'img': 7
+    'img': 7,
+    "existed": 8
 };
-// https://drive.google.com/drive/folders/1abYtHWocfsOTqofS7yp3aHZhHl7cr09O?usp=sharing
-export async function fetchSheetData() {
-    const range = "Sheet2!A120:AC130";
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`;
-    const response = await fetch(url);
-    const data = await response.json();
 
-    const rows: string[][] = Array.isArray(data.values) ? data.values : [];
+const faqColumns: Record<string, number>= {
+    'question':1,
+    "answer":2
+};
 
-    return rows.map((row: string[]) => {
-        const rowData: unknown = {};
-
-        for (const [key, index] of Object.entries(columns as Record<string, number>)) {
-            rowData[key] = row[index - 1] || '';
-        }
-
-        return rowData;
-    });
-}
+const GOOGLE_SHEET_API = (range) => `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`
 
 export async function fetchAllSheetData() {
-    const range = "Sheet2!A2:AC";
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`;
-    const response = await fetch(url);
+    const range = "Sheet2!A1:AC";
+    const response = await fetch(GOOGLE_SHEET_API(range));
     const data = await response.json();
 
     const rows: string[][] = Array.isArray(data.values) ? data.values : [];
@@ -48,3 +36,28 @@ export async function fetchAllSheetData() {
         return rowData;
     });
 }
+
+export async function fetchFaqData() {
+    const range = "Sheet3!A1:B";
+    const response = await fetch(GOOGLE_SHEET_API(range));
+    const data = await response.json();
+
+    const rows: string[][] = Array.isArray(data.values) ? data.values : [];
+
+    return rows.map((row: string[]) => {
+        const rowData: unknown = {};
+
+        for (const [key, index] of Object.entries(faqColumns as Record<string, number>)) {
+            rowData[key] = row[index - 1] || '';
+        }
+
+        return rowData;
+    });
+}
+
+const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dorcbhjzc/image/upload/";
+
+export const getCloudinaryImageUrl = (img: string): string => {
+    const fileNameWithoutExtension = img.toLowerCase().replace(/ /g, "_")
+    return `${CLOUDINARY_BASE_URL}${fileNameWithoutExtension}.webp`;
+};

@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
-import {areas} from "../service/constants.ts";
+// import {areas} from "../service/constants.ts";
+import { Analytics } from "@vercel/analytics/react"
+
 
 const CustomNavbar = () => {
     const [navbarBg, setNavbarBg] = useState("navbar-transparent");
@@ -31,15 +33,16 @@ const CustomNavbar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link href="/" className="mx-3">Home</Nav.Link>
-                        <Nav.Link href="/merch" className="mx-3">Merch</Nav.Link>
-                        <Nav.Link href="/" className="mx-3">Agenda</Nav.Link>
-                        <Nav.Link href="/delegate-positions" className="mx-3 d-block d-md-none">Delegates</Nav.Link>
-                        <NavDropdown title="Delegates" id="delegates-dropdown" className="mx-3 d-none d-md-block">
-                            <NavDropdown.Item href={`/delegates`}>All</NavDropdown.Item>
-                            {areas.map(x=> (
-                                <NavDropdown.Item key={x}  href={`/delegates?position=${x}`}>{x}</NavDropdown.Item>
-                            ))}
-                        </NavDropdown>
+                        {/*<Nav.Link href="/merch" className="mx-3">Merch</Nav.Link>*/}
+                        {/*<Nav.Link href="/challenges" className="mx-3">Challenges</Nav.Link>*/}
+                        <Nav.Link href="https://www.aies.ec/euroxpro-italy-2025-live-agenda" target={'_blank'} className="mx-3">Agenda</Nav.Link>
+                        <Nav.Link href="/delegate-positions" className="mx-3">Delegates</Nav.Link>
+                        {/*<NavDropdown title="Delegates" id="delegates-dropdown" className="mx-3 d-none d-md-block">*/}
+                        {/*    <NavDropdown.Item href={`/delegates`}>All</NavDropdown.Item>*/}
+                        {/*    {areas.map(x=> (*/}
+                        {/*        <NavDropdown.Item key={x}  href={`/delegates?position=${x}`}>{x}</NavDropdown.Item>*/}
+                        {/*    ))}*/}
+                        {/*</NavDropdown>*/}
                         <Nav.Link href="/cc" className="mx-3">CC Team</Nav.Link>
                         <NavDropdown title="Help" id="help-dropdown" className="mx-3">
                             <NavDropdown.Item href="/resources">Resources</NavDropdown.Item>
@@ -48,6 +51,7 @@ const CustomNavbar = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
+            <Analytics />
         </Navbar>
     );
 };

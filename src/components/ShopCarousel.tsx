@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 const items = [
     {
-        name: "EuroXPro'25 T-Shirt",
+        name: "EuroXpro'25 T-Shirt",
         price: "€12.00",
         img: "t-shirt.png",
     },
     {
-        name: "EuroXPro'25 Hoodie",
+        name: "EuroXpro'25 Hoodie",
         price: "€30.00",
         img: "euroxproHoodie.png",
     },
@@ -43,6 +43,11 @@ const items = [
         name: "EuroXpro'25 Lighter",
         price: "€2.50",
         img: "lighter.png",
+    },
+    {
+        name: "AIESEC Bottle Opener",
+        price: "€4.00",
+        img: "bottleOpener.png",
     },
 ];
 

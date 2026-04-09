@@ -1,26 +1,7 @@
-import {ChangeEvent, FC, FormEvent, useState} from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { FC } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Feedback: FC = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        description: "",
-    });
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData((prevState) => ({
-            ...prevState,
-            [name]: value,
-        }));
-    };
-
-    const handleSubmit = (e: FormEvent) => {
-        e.preventDefault();
-        console.log(formData);
-    };
-
     return (
         <main
             style={{
@@ -34,57 +15,25 @@ const Feedback: FC = () => {
                 padding: "20px",
             }}
         >
-        <Container fluid className="p-5">
-            <Row className="align-items-center">
-                {/* Left Section - Form */}
-                <Col xs={12} md={6} className="p-4">
-                    <h2 className="mb-4">Feedback Form</h2>
+            <Container fluid className="text-center">
+                {/* Centered Title */}
+                <h2 className="mb-4">Feedback</h2>
 
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                placeholder="Enter your name"
-                            />
-                        </Form.Group>
+                <Row className="justify-content-center">
+                    {/* Buttons Column */}
+                    <Col xs={12} md={6} className="d-flex flex-column align-items-center mb-4">
+                        <a href="/" className="btn btn-danger my-2 w-100">Day 1</a>
+                        <a href="/" className="btn btn-danger my-2 w-100">Day 2</a>
+                        <a href="/" className="btn btn-danger my-2 w-100">Day 3</a>
+                        <a href="/" className="btn btn-danger my-2 w-100">Day 4</a>
+                    </Col>
 
-                        <Form.Group className="mb-3">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                placeholder="Enter your email"
-                            />
-                        </Form.Group>
-
-                        <Form.Group className="mb-4">
-                            <Form.Label>Description</Form.Label>
-                            <Form.Control
-                                as="textarea"
-                                name="description"
-                                value={formData.description}
-                                onChange={handleChange}
-                                placeholder="Enter your feedback"
-                                rows={4}
-                            />
-                        </Form.Group>
-
-                        <Button type="submit" variant="danger">
-                            Send Feedback
-                        </Button>
-                    </Form>
-                </Col>
-                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
-                    <img src="./europe.png" alt="Europe" className="img-fluid" style={{ maxWidth: "80%", width: '450px'}} />
-                </Col>
-            </Row>
-        </Container>
+                    {/* Image Column */}
+                    <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
+                        <img src="./europe.png" alt="Europe" className="img-fluid" style={{ maxWidth: "80%", width: "450px" }} />
+                    </Col>
+                </Row>
+            </Container>
         </main>
     );
 };
