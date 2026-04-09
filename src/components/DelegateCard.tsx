@@ -10,7 +10,16 @@ export interface DelegateCardProps {
 }
 
 const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
-    const [imageSrc, setImageSrc] = useState(getCloudinaryImageUrl(name));
+    const [imgLoaded, setImgLoaded] = useState(false);
+    const [imageUrl, setImageUrl] = useState<string | null>(null);
+    const API_KEY = "YOUR_API_KEY";
+    const folderId = "YOUR_FOLDER_API"
+    // Fetch image URL from Google Drive when component mounts or image URL changes
+    useEffect(() => {
+        const fetchImage = async () => {
+            const fetchedImageUrl = await fetchImageUrl(img, folderId, API_KEY);
+            setImageUrl(fetchedImageUrl);
+        };
 
     useEffect(() => {
         setImageSrc(getCloudinaryImageUrl(name))
