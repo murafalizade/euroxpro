@@ -43,8 +43,8 @@ const fetchImageUrl = async (img: string, folderId: string, apiKey: string) => {
 const DelegateCard: FC<DelegateCardProps> = ({ name, lc, position, img }) => {
     const [imgLoaded, setImgLoaded] = useState(false);
     const [imageUrl, setImageUrl] = useState<string | null>(null);
-    const API_KEY = "AIzaSyA_l7WTCB04HR7s208I7dNOCzQ8LoP6jXk";
-    const folderId = "1abYtHWocfsOTqofS7yp3aHZhHl7cr09O"
+    const API_KEY = "YOUR_API_KEY";
+    const folderId = "YOUR_FOLDER_API"
     // Fetch image URL from Google Drive when component mounts or image URL changes
     useEffect(() => {
         const fetchImage = async () => {
